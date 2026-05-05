@@ -1,0 +1,1 @@
+export { MainPageView } from './page';
