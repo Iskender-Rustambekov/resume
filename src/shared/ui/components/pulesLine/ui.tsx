@@ -1,6 +1,6 @@
 export function PulseLine() {
 	return (
-		<svg className="w-full h-[200px]" viewBox="0 0 500 200">
+		<svg className="w-full h-50" viewBox="0 0 500 200">
 			<path
 				d="M20 100 C150 20, 350 180, 480 100"
 				stroke="rgba(255,255,255,0.12)"
