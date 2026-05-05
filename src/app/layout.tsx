@@ -2,6 +2,8 @@ import { Geist, JetBrains_Mono } from 'next/font/google';
 
 import '@/shared/styles/index.css';
 
+import { ThemeProvider } from '@/entities/theme';
+
 import type { Metadata } from 'next';
 
 const jetBrainsMono = JetBrains_Mono({
@@ -27,9 +29,11 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${jetBrainsMono.variable} dark h-full antialiased`}
+			className={`${geistSans.variable} ${jetBrainsMono.variable} h-full antialiased`}
 		>
-			<body className="min-h-full flex flex-col font-mono">{children}</body>
+			<body className="min-h-full flex flex-col font-mono">
+				<ThemeProvider>{children}</ThemeProvider>
+			</body>
 		</html>
 	);
 }

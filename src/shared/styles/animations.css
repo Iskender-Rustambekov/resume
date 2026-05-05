@@ -1,0 +1,9 @@
+@keyframes movePulse {
+	from {
+		stroke-dashoffset: 500;
+	}
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}

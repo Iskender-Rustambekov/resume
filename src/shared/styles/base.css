@@ -11,3 +11,14 @@
 		@apply font-sans;
 	}
 }
+
+.animate-pulse-line {
+  stroke-dashoffset: 500;
+  animation: movePulse 2.5s linear infinite;
+}
+
+@keyframes movePulse {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

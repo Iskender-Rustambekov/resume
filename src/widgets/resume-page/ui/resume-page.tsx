@@ -5,7 +5,8 @@ import {
 	MapPin,
 } from '@phosphor-icons/react/dist/ssr';
 
-import { Section } from '@/shared/ui/components';
+import { ThemeSwitch } from '@/entities/theme';
+import { PulseLine, Section } from '@/shared/ui/components';
 import { Button } from '@/shared/ui/shadcn/ui/button';
 
 const contacts = [
@@ -61,6 +62,7 @@ export function ResumePage() {
 	return (
 		<main className="min-h-screen bg-background text-foreground">
 			<div className="mx-auto flex w-full max-w-5xl flex-col px-5 py-8 sm:px-8 lg:px-10">
+				<ThemeSwitch />
 				<header className="flex flex-col gap-8 py-10 md:flex-row md:items-end md:justify-between">
 					<div className="max-w-2xl">
 						<p className="mb-4 text-sm font-medium text-muted-foreground">
@@ -91,6 +93,10 @@ export function ResumePage() {
 						</Button>
 					</div>
 				</header>
+
+				<div className="w-full min-h-10 bg-accent-foreground">
+					<PulseLine />
+				</div>
 
 				<section className="grid gap-3 border-y border-border py-5 sm:grid-cols-3">
 					{contacts.map((contact) => {
