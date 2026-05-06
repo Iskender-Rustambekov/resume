@@ -17,8 +17,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-	title: 'Frontend Developer Resume',
-	description: 'Resume page for a frontend developer.',
+	title: 'Frontend Developer Portfolio',
+	description: 'Premium frontend portfolio built with Next.js, React and GSAP.',
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
 			lang="en"
 			className={`${geistSans.variable} ${jetBrainsMono.variable} h-full antialiased`}
 		>
-			<body className="min-h-full flex flex-col font-mono">
+			<body className="min-h-full flex flex-col font-sans">
 				<ThemeProvider>{children}</ThemeProvider>
 			</body>
 		</html>

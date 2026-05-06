@@ -2,56 +2,39 @@
 
 import { useRef } from 'react';
 
-import { useGSAP } from '@gsap/react';
+import { Header } from '@/widgets/layout';
 
-import { ThemeSwitch } from '@/entities/theme';
-import { appGsap } from '@/shared/lib';
-import { PulseLine } from '@/shared/ui/components';
+import { PageBackground } from './components';
+import {
+	ContactSection,
+	CraftSection,
+	Footer,
+	FramesSection,
+	HeroSection,
+	StackSection,
+} from './sections';
+import { useMainPageMotion } from '../lib/useMainPageMotion';
 
-import { ContactsSection } from './contacts';
-import { EducationSection } from './education';
-import { ExperienceSection } from './experience';
-import { HeroSection } from './hero';
-import { ProjectsSection } from './projects';
-import { SkillsSection } from './skills';
+import styles from './main-page.module.css';
 
 export const MainPageView = () => {
-	const containerRef = useRef<HTMLDivElement>(null);
+	const rootRef = useRef<HTMLElement>(null);
 
-	useGSAP(
-		() => {
-			appGsap.to('.box', { rotation: '+=360' });
-		},
-		{ scope: containerRef },
-	);
+	useMainPageMotion(rootRef);
 
 	return (
-		<main className="min-h-screen bg-background text-foreground">
-			<div className="mx-auto flex w-full max-w-5xl flex-col px-5 py-8 sm:px-8 lg:px-10">
-				<ThemeSwitch />
-				<HeroSection />
-				<ContactsSection />
-
-				<div className="w-full min-h-10 bg-accent-foreground">
-					<PulseLine />
-				</div>
-
-				<div
-					ref={containerRef}
-					className="w-full min-h-10 mt-6 flex justify-around items-center bg-accent-foreground"
-				>
-					<div className="w-4 h-4 bg-red-700 box"></div>
-					<div className="w-4 h-4 bg-red-700 box"></div>
-					<div className="w-4 h-4 bg-red-700 box"></div>
-					<div className="w-4 h-4 bg-red-700 box"></div>
-					<div className="w-4 h-4 bg-red-700 box"></div>
-					<div className="w-4 h-4 bg-red-700 box"></div>
-				</div>
-				<SkillsSection />
-				<ExperienceSection />
-				<ProjectsSection />
-				<EducationSection />
-			</div>
+		<main
+			ref={rootRef}
+			className={`${styles.root} min-h-screen overflow-hidden`}
+		>
+			<PageBackground />
+			<Header />
+			<HeroSection />
+			<CraftSection />
+			<FramesSection />
+			<StackSection />
+			<ContactSection />
+			<Footer />
 		</main>
 	);
 };

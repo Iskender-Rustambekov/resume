@@ -7,3 +7,9 @@
 		stroke-dashoffset: 0;
 	}
 }
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		scroll-behavior: auto !important;
+	}
+}

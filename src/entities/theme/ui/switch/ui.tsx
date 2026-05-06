@@ -15,9 +15,19 @@ export const ThemeSwitch = () => {
 	const isLightTheme = Theme.LIGHT === theme;
 
 	return (
-		<div className="flex items-center gap-x-2">
-			<Switch checked={isLightTheme} onCheckedChange={() => toggleTheme()} />
-			{isLightTheme ? <SunIcon /> : <MoonIcon />}
+		<div className="flex items-center gap-x-2 rounded-full border border-border bg-card/70 px-3 py-2 backdrop-blur-xl">
+			<Switch
+				size="sm"
+				checked={isLightTheme}
+				onCheckedChange={() => toggleTheme()}
+				aria-label="Toggle theme"
+				className="data-checked:bg-primary data-unchecked:bg-input"
+			/>
+			{isLightTheme ? (
+				<SunIcon className="size-4 text-primary" weight="bold" />
+			) : (
+				<MoonIcon className="size-4 text-primary" weight="bold" />
+			)}
 		</div>
 	);
 };

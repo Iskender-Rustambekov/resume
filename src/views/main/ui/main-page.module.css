@@ -1,0 +1,161 @@
+.root {
+	position: relative;
+	isolation: isolate;
+	background:
+		radial-gradient(
+			circle at 18% 10%,
+			color-mix(in oklch, var(--primary) 22%, transparent),
+			transparent 30rem
+		),
+		radial-gradient(
+			circle at 88% 24%,
+			color-mix(in oklch, var(--accent) 18%, transparent),
+			transparent 34rem
+		),
+		radial-gradient(
+			circle at 52% 74%,
+			color-mix(in oklch, var(--secondary) 12%, transparent),
+			transparent 32rem
+		),
+		linear-gradient(
+			180deg,
+			color-mix(in oklch, var(--background) 96%, var(--primary) 4%) 0%,
+			color-mix(in oklch, var(--background) 92%, var(--card) 8%) 48%,
+			var(--background) 100%
+		);
+	color: var(--foreground);
+}
+
+.root::before {
+	position: fixed;
+	inset: 0;
+	z-index: -2;
+	pointer-events: none;
+	content: '';
+	background:
+		linear-gradient(
+			color-mix(in oklch, var(--foreground) 4%, transparent) 1px,
+			transparent 1px
+		),
+		linear-gradient(
+			90deg,
+			color-mix(in oklch, var(--foreground) 3%, transparent) 1px,
+			transparent 1px
+		);
+	background-size: 72px 72px;
+	mask-image: radial-gradient(
+		circle at 50% 16%,
+		var(--foreground),
+		transparent 72%
+	);
+}
+
+.root::after {
+	position: fixed;
+	inset: auto 0 0;
+	z-index: -1;
+	height: 38vh;
+	pointer-events: none;
+	content: '';
+	background: linear-gradient(
+		0deg,
+		color-mix(in oklch, var(--background) 82%, transparent),
+		transparent
+	);
+}
+
+.animeGrid {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	background:
+		linear-gradient(
+			115deg,
+			transparent 0 46%,
+			color-mix(in oklch, var(--foreground) 8%, transparent) 46.1% 46.35%,
+			transparent 46.45%
+		),
+		linear-gradient(
+			65deg,
+			transparent 0 58%,
+			color-mix(in oklch, var(--primary) 10%, transparent) 58.1% 58.3%,
+			transparent 58.4%
+		);
+	background-size: 440px 440px;
+	opacity: 0.38;
+}
+
+.noiseLayer {
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='0.62'/%3E%3C/svg%3E");
+	background-size: 220px 220px;
+	animation: grainDrift 9s steps(6) infinite;
+	will-change: transform;
+}
+
+.speedLines {
+	background:
+		repeating-linear-gradient(
+			112deg,
+			transparent 0 22px,
+			color-mix(in oklch, var(--foreground) 14%, transparent) 23px,
+			transparent 25px
+		),
+		linear-gradient(
+			180deg,
+			transparent,
+			color-mix(in oklch, var(--background) 44%, transparent)
+		);
+	mask-image: radial-gradient(
+		circle at 50% 42%,
+		var(--foreground) 0 48%,
+		transparent 76%
+	);
+}
+
+.projectGlow {
+	opacity: 0.62;
+}
+
+.projectGlowPrimary {
+	background: linear-gradient(
+		90deg,
+		color-mix(in oklch, var(--primary) 78%, transparent),
+		color-mix(in oklch, var(--card) 64%, transparent),
+		color-mix(in oklch, var(--accent) 54%, transparent)
+	);
+}
+
+.projectGlowSecondary {
+	background: linear-gradient(
+		90deg,
+		color-mix(in oklch, var(--chart-4) 70%, transparent),
+		color-mix(in oklch, var(--card) 64%, transparent),
+		color-mix(in oklch, var(--secondary) 58%, transparent)
+	);
+}
+
+.projectGlowAccent {
+	background: linear-gradient(
+		90deg,
+		color-mix(in oklch, var(--chart-5) 70%, transparent),
+		color-mix(in oklch, var(--card) 64%, transparent),
+		color-mix(in oklch, var(--secondary) 58%, transparent)
+	);
+}
+
+@keyframes grainDrift {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(-8%, -6%, 0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.noiseLayer {
+		animation: none;
+	}
+}
