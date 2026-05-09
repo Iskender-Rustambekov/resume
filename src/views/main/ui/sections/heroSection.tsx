@@ -2,8 +2,7 @@ import Image from 'next/image';
 
 import { ArrowUpRightIcon, GithubLogoIcon } from '@phosphor-icons/react';
 
-import { contactLinks, heroMetrics } from '../../model';
-import { MetricCard } from '../components';
+import { contactLinks } from '../../model';
 
 export const HeroSection = () => {
 	return (
@@ -56,18 +55,12 @@ export const HeroSection = () => {
 						<Image
 							src="/media/images/main-page/hero4.png"
 							alt="hero-section-image"
-							className="max-h-200 object-contain"
+							className="min-h-150 max-h-200 h-full object-contain"
 							width={500}
 							height={800}
 							priority
 						/>
 					</div>
-				</div>
-
-				<div className="grid gap-3 sm:grid-cols-3 lg:col-span-2">
-					{heroMetrics.map((metric) => (
-						<MetricCard key={metric.value} metric={metric} />
-					))}
 				</div>
 			</div>
 		</section>

@@ -21,7 +21,6 @@ export const MainPageView = () => {
 	const rootRef = useRef<HTMLElement>(null);
 
 	useMainPageMotion(rootRef);
-
 	return (
 		<main
 			ref={rootRef}
@@ -29,10 +28,12 @@ export const MainPageView = () => {
 		>
 			<PageBackground />
 			<Header />
+
 			<HeroSection />
+			<StackSection />
 			<CraftSection />
 			<FramesSection />
-			<StackSection />
+
 			<ContactSection />
 			<Footer />
 		</main>

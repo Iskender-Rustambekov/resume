@@ -10,7 +10,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 	const glowClassName = projectGlowClassNames[project.accent];
 
 	return (
-		<article className="group relative flex h-[62vh] min-h-120 w-[min(82vw,620px)] flex-col justify-between overflow-hidden rounded-[2rem] border border-border bg-card/75 p-7 shadow-2xl backdrop-blur-xl max-md:w-[calc(100vw-2.5rem)] max-md:min-h-[430px]">
+		<article className="group relative flex h-[62vh] min-h-120 w-[min(82vw,620px)] flex-col justify-between overflow-hidden rounded-[2rem] border border-border bg-card/75 p-7 shadow-2xl backdrop-blur-xl max-md:w-[calc(100vw-2.5rem)] max-md:min-h-107.5">
 			<div
 				className={`${styles.projectGlow} ${glowClassName} absolute inset-x-8 top-8 h-56 rounded-full blur-3xl transition group-hover:scale-110`}
 			/>

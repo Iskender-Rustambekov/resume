@@ -1,16 +1,16 @@
-type SectionHeadingProps = {
+interface ISectionHeadingProps {
 	kicker: string;
 	title: string;
 	className?: string;
 	motion?: 'reveal';
-};
+}
 
 export const SectionHeading = ({
 	kicker,
 	title,
 	className,
 	motion,
-}: SectionHeadingProps) => {
+}: ISectionHeadingProps) => {
 	return (
 		<div className={className} data-motion={motion}>
 			<p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">

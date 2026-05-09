@@ -1,6 +1,6 @@
-export { ContactSection } from './contact-section';
-export { CraftSection } from './craft-section';
+export { ContactSection } from './contactSection';
+export { CraftSection } from './craftSection';
 export { Footer } from './footer';
-export { FramesSection } from './frames-section';
-export { HeroSection } from './hero-section';
-export { StackSection } from './stack-section';
+export { FramesSection } from './framesSection';
+export { HeroSection } from './heroSection';
+export { StackSection } from './stackSection';

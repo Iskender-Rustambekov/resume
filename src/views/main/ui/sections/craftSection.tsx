@@ -1,5 +1,6 @@
+import { SectionHeading } from '@/shared/ui/components';
+
 import { processSteps } from '../../model';
-import { SectionHeading } from '../components';
 
 export const CraftSection = () => {
 	return (

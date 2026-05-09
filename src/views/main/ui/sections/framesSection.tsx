@@ -1,5 +1,7 @@
+import { SectionHeading } from '@/shared/ui/components';
+
 import { projects } from '../../model';
-import { ProjectCard, SectionHeading } from '../components';
+import { ProjectCard } from '../components';
 
 export const FramesSection = () => {
 	return (

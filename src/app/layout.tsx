@@ -3,6 +3,7 @@ import { Geist, JetBrains_Mono } from 'next/font/google';
 import '@/shared/styles/index.css';
 
 import { ThemeProvider } from '@/entities/theme';
+import { TooltipProvider } from '@/shared/ui/shadcn/ui/tooltip';
 
 import type { Metadata } from 'next';
 
@@ -32,7 +33,9 @@ export default function RootLayout({
 			className={`${geistSans.variable} ${jetBrainsMono.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col font-sans">
-				<ThemeProvider>{children}</ThemeProvider>
+				<ThemeProvider>
+					<TooltipProvider>{children}</TooltipProvider>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
