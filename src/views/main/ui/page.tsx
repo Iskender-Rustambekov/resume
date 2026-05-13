@@ -4,10 +4,11 @@ import { useRef } from 'react';
 
 import { Header } from '@/widgets/layout';
 
-import { PageBackground } from './components';
+import { ContentParticles, PageBackground } from './components';
 import {
 	ContactSection,
 	CraftSection,
+	ExperienceSection,
 	Footer,
 	FramesSection,
 	HeroSection,
@@ -22,20 +23,23 @@ export const MainPageView = () => {
 
 	useMainPageMotion(rootRef);
 	return (
-		<main
-			ref={rootRef}
-			className={`${styles.root} min-h-screen overflow-hidden`}
-		>
+		<main ref={rootRef} className={`${styles.root} min-h-screen`}>
 			<PageBackground />
 			<Header />
 
 			<HeroSection />
-			<StackSection />
-			<CraftSection />
-			<FramesSection />
+			<div data-motion="post-hero-content" className={styles.contentPanel}>
+				<ContentParticles />
+				<div className={styles.contentInner}>
+					<FramesSection />
+					<CraftSection />
+					<ExperienceSection />
+					<StackSection />
 
-			<ContactSection />
-			<Footer />
+					<ContactSection />
+					<Footer />
+				</div>
+			</div>
 		</main>
 	);
 };

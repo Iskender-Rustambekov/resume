@@ -11,14 +11,18 @@
 		"test": "vitest",
 		"test:run": "vitest run",
 		"test:coverage": "vitest run --coverage",
-		"icons:gen": "tsx scripts/generateIcons.ts"
+		"icons:gen": "tsx scripts/generateIcons.ts",
+		"api:gen": "orval --config orval.config.cjs"
 	},
 	"dependencies": {
 		"@gsap/react": "^2.1.2",
 		"@phosphor-icons/react": "^2.1.10",
+		"axios": "^1.16.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"gsap": "^3.15.0",
+		"js-cookie": "^3.0.5",
+		"lodash-es": "^4.18.1",
 		"next": "16.2.4",
 		"radix-ui": "^1.4.3",
 		"react": "19.2.4",
@@ -32,6 +36,8 @@
 		"@testing-library/jest-dom": "^6.9.1",
 		"@testing-library/react": "^16.3.2",
 		"@testing-library/user-event": "^14.6.1",
+		"@types/js-cookie": "^3.0.6",
+		"@types/lodash-es": "^4.17.12",
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
@@ -43,6 +49,7 @@
 		"eslint-plugin-boundaries": "^6.0.2",
 		"eslint-plugin-import": "^2.32.0",
 		"jsdom": "^29.1.1",
+		"orval": "^8.9.1",
 		"prettier": "^3.8.3",
 		"shadcn": "^4.6.0",
 		"tailwindcss": "^4",
@@ -50,5 +57,6 @@
 		"typescript": "^5",
 		"typescript-eslint": "^8.59.1",
 		"vitest": "^4.1.5"
-	}
+	},
+	"packageManager": "pnpm@11.1.1+sha512.d1fdf5f73c617b64fa1a56a81c3c8dfe0e966e33a6010aa256b517ae77be21d93e05affc0de1a83b0e4f29d569f68b446ae8f068cd7247c0bb3df0fb4d7bdf9a"
 }

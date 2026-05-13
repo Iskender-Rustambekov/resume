@@ -7,31 +7,34 @@ import { splitArray } from '@/shared/utils';
 export const StackSection = () => {
 	return (
 		<section className="container grid gap-10 py-24">
-			<SectionHeading motion="reveal" kicker="Stack" title="Have experience" />
+			<SectionHeading
+				motion="reveal"
+				kicker="Stack"
+				title="Technologies I use in production."
+			/>
 
-			<div className="relative md:gap-4 grid rounded-xl gap-2 overflow-hidden mask-[linear-gradient(to_right,transparent,black_12%,black_88%,transparent)] bg-[url('/media/images/main-page/space.jpg')] bg-cover bg-center py-4">
-				{splitArray(Object.entries(svgIcons.dev), 3).map((iconList, index) => (
-					<Marquee
-						key={`${index}-icon-list`}
-						className="z-10"
-						trackClassName="gap-4"
-						reversed={index % 2 === 0}
-					>
-						{iconList.map(([key, icon]) => (
-							<div
-								key={`${key}-icon`}
-								className="p-2 md:p-6 rounded-[1.75rem] border border-border bg-card/75 backdrop-blur-xl"
-							>
-								<Image
-									src={icon}
-									alt={`${key}-icon`}
-									width={60}
-									height={60}
-									className="object-contain"
-								/>
-							</div>
-						))}
-					</Marquee>
+			<div className="relative grid gap-3 overflow-hidden rounded-xl bg-[url('/media/images/main-page/space.jpg')] bg-cover bg-center py-4 mask-[linear-gradient(to_right,transparent,black_12%,black_88%,transparent)] md:gap-4">
+				{splitArray(Object.entries(svgIcons.dev), 3).map((row, index) => (
+					<div key={index} className="relative z-10 grid items-center gap-3">
+						<Marquee trackClassName="gap-4" reversed={index % 2 === 0}>
+							{row.map(([key, icon]) => (
+								<div
+									key={`${key}-icon`}
+									className="flex items-center gap-2 rounded-[1.75rem] border border-border bg-card/75 p-2 md:p-6"
+								>
+									<Image
+										src={icon}
+										alt={`${key}-icon`}
+										width={60}
+										height={60}
+										className="h-15 w-15 object-contain max-md:h-10 max-md:w-10"
+									/>
+
+									<p className="font-bold">{key}</p>
+								</div>
+							))}
+						</Marquee>
+					</div>
 				))}
 			</div>
 		</section>

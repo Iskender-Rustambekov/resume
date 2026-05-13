@@ -15,7 +15,7 @@ export const ThemeSwitch = () => {
 	const isLightTheme = Theme.LIGHT === theme;
 
 	return (
-		<div className="flex items-center gap-x-2 rounded-full border border-border bg-card/70 px-3 py-2 backdrop-blur-xl">
+		<div className="flex items-center gap-x-2 rounded-full border border-border bg-card/70 px-3 py-2">
 			<Switch
 				size="sm"
 				checked={isLightTheme}

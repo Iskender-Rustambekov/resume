@@ -1,8 +1,12 @@
 export {
 	contactLinks,
-	heroMetrics,
 	processSteps,
 	projects,
-	skills,
+	workExperience,
 } from './main-page.data';
-export type { Metric, ProcessStep, Project } from './main-page.types';
+export type {
+	ExperienceItem,
+	Metric,
+	ProcessStep,
+	Project,
+} from './main-page.types';

@@ -5,8 +5,9 @@ import DevCSSIcon from '@/shared/assets/icons/dev/CSS.svg'
 import DevDockerIcon from '@/shared/assets/icons/dev/Docker.svg'
 import DevESLintIcon from '@/shared/assets/icons/dev/ESLint.svg'
 import DevFigmaIcon from '@/shared/assets/icons/dev/Figma.svg'
+import DevFramerMotionIcon from '@/shared/assets/icons/dev/FramerMotion.svg'
 import DevGitIcon from '@/shared/assets/icons/dev/Git.svg'
-import DevGsapIcon from '@/shared/assets/icons/dev/gsap.svg'
+import DevGSAPIcon from '@/shared/assets/icons/dev/GSAP.svg'
 import DevHTMLIcon from '@/shared/assets/icons/dev/HTML.svg'
 import DevJavaScriptIcon from '@/shared/assets/icons/dev/JavaScript.svg'
 import DevJestIcon from '@/shared/assets/icons/dev/Jest.svg'
@@ -32,8 +33,9 @@ export const svgIcons = {
 'Docker': DevDockerIcon,
 'ESLint': DevESLintIcon,
 'Figma': DevFigmaIcon,
+'FramerMotion': DevFramerMotionIcon,
 'Git': DevGitIcon,
-'gsap': DevGsapIcon,
+'GSAP': DevGSAPIcon,
 'HTML': DevHTMLIcon,
 'JavaScript': DevJavaScriptIcon,
 'Jest': DevJestIcon,
