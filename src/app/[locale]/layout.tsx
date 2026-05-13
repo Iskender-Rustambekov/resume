@@ -2,6 +2,9 @@ import { Geist, JetBrains_Mono } from 'next/font/google';
 
 import '@/shared/styles/index.css';
 
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+
 import { ThemeProvider } from '@/entities/theme';
 import { TooltipProvider } from '@/shared/ui/shadcn/ui/tooltip';
 
@@ -21,21 +24,28 @@ export const metadata: Metadata = {
 	title: 'Frontend Developer Portfolio',
 	description: 'Premium frontend portfolio built with Next.js, React and GSAP.',
 };
-
-export default function RootLayout({
-	children,
-}: Readonly<{
+type Props = {
 	children: React.ReactNode;
-}>) {
+	params: Promise<{
+		locale: string;
+	}>;
+};
+
+export default async function RootLayout({ children, params }: Props) {
+	const { locale } = await params;
+	const messages = await getMessages();
+	
 	return (
 		<html
-			lang="en"
+			lang={locale}
 			className={`${geistSans.variable} ${jetBrainsMono.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col font-sans">
-				<ThemeProvider>
-					<TooltipProvider>{children}</TooltipProvider>
-				</ThemeProvider>
+				<NextIntlClientProvider messages={messages}>
+					<ThemeProvider>
+						<TooltipProvider>{children}</TooltipProvider>
+					</ThemeProvider>
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

@@ -1,5 +1,9 @@
 import { MainPageView } from '@/views/main';
 
 export default function Home() {
-	return <MainPageView />;
+	return (
+		<div>
+			<MainPageView />
+		</div>
+	);
 }
