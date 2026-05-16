@@ -1,0 +1,46 @@
+.contentParticles {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+	border-radius: inherit;
+}
+
+.contentParticle {
+	position: absolute;
+	top: var(--particle-y);
+	left: var(--particle-x);
+	width: var(--particle-size);
+	height: var(--particle-size);
+	border-radius: 999px;
+	opacity: var(--particle-alpha);
+	background: radial-gradient(
+		circle,
+		color-mix(in oklch, var(--primary) 78%, var(--foreground) 22%) 0 22%,
+		color-mix(in oklch, var(--accent) 82%, var(--primary) 18%) 42%,
+		color-mix(in oklch, var(--primary) 58%, transparent) 64%,
+		transparent 76%
+	);
+	mix-blend-mode: normal;
+	box-shadow:
+		0 0 0.25rem color-mix(in oklch, var(--foreground) 26%, var(--primary) 74%),
+		0 0 1.25rem color-mix(in oklch, var(--primary) 64%, transparent),
+		0 0 2.7rem color-mix(in oklch, var(--accent) 38%, transparent);
+	will-change: transform, opacity;
+}
+
+:global(.dark) .contentParticle {
+	background: radial-gradient(
+		circle,
+		color-mix(in oklch, white 88%, var(--foreground) 12%) 0 20%,
+		color-mix(in oklch, var(--primary) 92%, white 8%) 38%,
+		color-mix(in oklch, var(--accent) 68%, transparent) 58%,
+		transparent 76%
+	);
+	mix-blend-mode: screen;
+	box-shadow:
+		0 0 0.45rem color-mix(in oklch, white 70%, var(--primary) 30%),
+		0 0 1.45rem color-mix(in oklch, var(--primary) 70%, transparent),
+		0 0 3.2rem color-mix(in oklch, var(--accent) 42%, transparent);
+}

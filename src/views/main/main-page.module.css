@@ -1,0 +1,128 @@
+.root {
+	position: relative;
+	isolation: isolate;
+	overflow-x: clip;
+	background:
+		radial-gradient(
+			circle at 18% 10%,
+			color-mix(in oklch, var(--primary) 22%, transparent),
+			transparent 30rem
+		),
+		radial-gradient(
+			circle at 88% 24%,
+			color-mix(in oklch, var(--accent) 18%, transparent),
+			transparent 34rem
+		),
+		radial-gradient(
+			circle at 52% 74%,
+			color-mix(in oklch, var(--secondary) 12%, transparent),
+			transparent 32rem
+		),
+		linear-gradient(
+			180deg,
+			color-mix(in oklch, var(--background) 96%, var(--primary) 4%) 0%,
+			color-mix(in oklch, var(--background) 92%, var(--card) 8%) 48%,
+			var(--background) 100%
+		);
+	color: var(--foreground);
+}
+
+.root::before {
+	position: fixed;
+	inset: 0;
+	z-index: -2;
+	pointer-events: none;
+	content: '';
+	background:
+		linear-gradient(
+			color-mix(in oklch, var(--foreground) 4%, transparent) 1px,
+			transparent 1px
+		),
+		linear-gradient(
+			90deg,
+			color-mix(in oklch, var(--foreground) 3%, transparent) 1px,
+			transparent 1px
+		);
+	background-size: 72px 72px;
+	mask-image: radial-gradient(
+		circle at 50% 16%,
+		var(--foreground),
+		transparent 72%
+	);
+}
+
+.root::after {
+	position: fixed;
+	inset: auto 0 0;
+	z-index: -1;
+	height: 38vh;
+	pointer-events: none;
+	content: '';
+	background: linear-gradient(
+		0deg,
+		color-mix(in oklch, var(--background) 82%, transparent),
+		transparent
+	);
+}
+
+.contentPanel {
+	position: relative;
+	z-index: 10;
+	margin-top: 0;
+	padding-top: 8vh;
+	background: var(--background);
+	border-top: 1px solid color-mix(in oklch, var(--border) 70%, transparent);
+	border-radius: 2rem 2rem 0 0;
+	box-shadow: 0 -2rem 5rem
+		color-mix(in oklch, var(--foreground) 16%, transparent);
+}
+
+.contentInner {
+	position: relative;
+	z-index: 1;
+}
+
+.animeGrid {
+	pointer-events: none;
+	background:
+		linear-gradient(
+			115deg,
+			transparent 0 46%,
+			color-mix(in oklch, var(--foreground) 8%, transparent) 46.1% 46.35%,
+			transparent 46.45%
+		),
+		linear-gradient(
+			65deg,
+			transparent 0 58%,
+			color-mix(in oklch, var(--primary) 10%, transparent) 58.1% 58.3%,
+			transparent 58.4%
+		);
+	background-size: 440px 440px;
+	opacity: 1;
+}
+
+.speedLines {
+	background:
+		repeating-linear-gradient(
+			112deg,
+			transparent 0 22px,
+			color-mix(in oklch, var(--foreground) 14%, transparent) 23px,
+			transparent 25px
+		),
+		linear-gradient(
+			180deg,
+			transparent,
+			color-mix(in oklch, var(--background) 44%, transparent)
+		);
+	mask-image: radial-gradient(
+		circle at 50% 42%,
+		var(--foreground) 0 48%,
+		transparent 76%
+	);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.contentParticles {
+		display: none;
+	}
+}

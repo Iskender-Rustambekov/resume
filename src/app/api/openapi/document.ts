@@ -49,7 +49,7 @@ export const openApiDocument = {
 		title: 'Profile API',
 		version: '1.0.0',
 		description:
-			'Public API contract for localized profile page content. Designed for client generation with Orval.',
+			'Public API contract for localized profile page content. Designed for client and server generation with Orval.',
 	},
 	servers: [
 		{
@@ -244,17 +244,31 @@ export const openApiDocument = {
 			ContactLinks: {
 				type: 'object',
 				additionalProperties: false,
-				required: ['email', 'github'],
+				required: ['email', 'github', 'linkedin', 'telegram', 'resume'],
 				properties: {
 					email: {
 						type: 'string',
 						format: 'uri',
-						example: 'mailto:frontend@example.com',
+						example: 'mailto:your.email@example.com',
 					},
 					github: {
 						type: 'string',
 						format: 'uri',
-						example: 'https://github.com/username',
+						example: 'https://github.com/your-username',
+					},
+					linkedin: {
+						type: 'string',
+						format: 'uri',
+						example: 'https://www.linkedin.com/in/your-username',
+					},
+					telegram: {
+						type: 'string',
+						format: 'uri',
+						example: 'https://t.me/your_username',
+					},
+					resume: {
+						type: 'string',
+						example: '#',
 					},
 				},
 			},

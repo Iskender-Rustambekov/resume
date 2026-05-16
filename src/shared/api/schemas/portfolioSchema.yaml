@@ -3,7 +3,7 @@
   "info": {
     "title": "Profile API",
     "version": "1.0.0",
-    "description": "Public API contract for localized profile page content. Designed for client generation with Orval."
+    "description": "Public API contract for localized profile page content. Designed for client and server generation with Orval."
   },
   "servers": [
     {

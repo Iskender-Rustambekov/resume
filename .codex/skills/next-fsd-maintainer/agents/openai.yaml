@@ -1,0 +1,4 @@
+interface:
+  display_name: "Next FSD Maintainer"
+  short_description: "Maintain this Next.js FSD project safely."
+  default_prompt: "Use this skill when changing architecture, routing, components, imports, or application code in this project."

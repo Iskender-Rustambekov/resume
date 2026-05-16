@@ -1,0 +1,4 @@
+interface:
+  display_name: "Profile UI Motion"
+  short_description: "Work on portfolio UI, responsive layout, and motion."
+  default_prompt: "Use this skill when editing the profile UI, page sections, styling, animation, or interactive visual behavior."

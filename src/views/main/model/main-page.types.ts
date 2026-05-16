@@ -11,14 +11,6 @@ export type ProcessStep = {
 	tone: string;
 };
 
-export type Project = {
-	kicker: string;
-	title: string;
-	description: string;
-	facts: string[];
-	stack: string[];
-	accent: 'primary' | 'secondary' | 'accent';
-};
 
 export type ExperienceItem = {
 	role: string;

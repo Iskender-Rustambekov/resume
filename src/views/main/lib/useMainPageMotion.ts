@@ -21,17 +21,10 @@ export const useMainPageMotion = (rootRef: RefObject<HTMLElement | null>) => {
 			animateHero();
 			animateReveals();
 			animatePanels();
-			animateCraftConsole();
 			animateHeroParallax();
 			animateHeroBreathing();
-			animateContentParticles();
-			const cleanupContentParticlePointer = animateContentParticlePointer();
 
 			appGsap.delayedCall(0.2, () => ScrollTrigger.refresh());
-
-			return () => {
-				cleanupContentParticlePointer?.();
-			};
 		},
 		{ scope: rootRef },
 	);
@@ -91,62 +84,6 @@ const animatePanels = () => {
 				},
 			);
 		});
-};
-
-const animateCraftConsole = () => {
-	const consoleElement = document.querySelector<HTMLElement>(
-		'[data-motion="craft-console"]',
-	);
-
-	if (!consoleElement) {
-		return;
-	}
-
-	appGsap.from(consoleElement, {
-		y: 40,
-		opacity: 0,
-		duration: 0.9,
-		ease: 'power3.out',
-		scrollTrigger: {
-			trigger: consoleElement,
-			start: 'top 78%',
-		},
-	});
-
-	appGsap.from('[data-motion="craft-line"]', {
-		x: -18,
-		opacity: 0,
-		duration: 0.7,
-		ease: 'power3.out',
-		stagger: 0.09,
-		scrollTrigger: {
-			trigger: consoleElement,
-			start: 'top 72%',
-		},
-	});
-
-	appGsap.fromTo(
-		'[data-motion="craft-line-fill"]',
-		{ scaleX: 0, transformOrigin: '0% 50%' },
-		{
-			scaleX: 1,
-			duration: 1.15,
-			ease: 'power2.out',
-			stagger: 0.12,
-			scrollTrigger: {
-				trigger: consoleElement,
-				start: 'top 70%',
-			},
-		},
-	);
-
-	appGsap.to('[data-motion="craft-pulse"]', {
-		scale: 1.65,
-		opacity: 0,
-		duration: 1.8,
-		ease: 'sine.out',
-		repeat: -1,
-	});
 };
 
 const animateHeroParallax = () => {
@@ -214,44 +151,4 @@ const animateContentParticles = () => {
 				repeatRefresh: true,
 			});
 		});
-};
-
-const animateContentParticlePointer = () => {
-	const particlesLayer = document.querySelector<HTMLElement>(
-		'[data-motion="content-particles"]',
-	);
-
-	if (!particlesLayer || !window.matchMedia('(pointer: fine)').matches) {
-		return;
-	}
-
-	const moveX = appGsap.quickTo(particlesLayer, 'x', {
-		duration: 0.8,
-		ease: 'power3.out',
-	});
-	const moveY = appGsap.quickTo(particlesLayer, 'y', {
-		duration: 0.8,
-		ease: 'power3.out',
-	});
-
-	const handlePointerMove = (event: PointerEvent) => {
-		const xProgress = event.clientX / window.innerWidth - 0.5;
-		const yProgress = event.clientY / window.innerHeight - 0.5;
-
-		moveX(xProgress * 24);
-		moveY(yProgress * 18);
-	};
-
-	const handlePointerLeave = () => {
-		moveX(0);
-		moveY(0);
-	};
-
-	window.addEventListener('pointermove', handlePointerMove, { passive: true });
-	window.addEventListener('pointerleave', handlePointerLeave);
-
-	return () => {
-		window.removeEventListener('pointermove', handlePointerMove);
-		window.removeEventListener('pointerleave', handlePointerLeave);
-	};
 };

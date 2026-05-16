@@ -1,1 +1,0 @@
-export { MainPageView } from './page';

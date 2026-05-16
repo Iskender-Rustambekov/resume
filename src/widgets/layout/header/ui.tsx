@@ -1,7 +1,8 @@
-import React from 'react';
+'use client';
 
 import { SparkleIcon } from '@phosphor-icons/react';
 
+import { LocaleSwitch } from '@/entities/locale';
 import { ThemeSwitch } from '@/entities/theme';
 
 export const Header = () => {
@@ -33,13 +34,8 @@ export const Header = () => {
 						))}
 					</div>
 					<div className="flex items-center gap-2">
+						<LocaleSwitch />
 						<ThemeSwitch />
-						<a
-							href="mailto:your.email@example.com"
-							className="hidden rounded-full bg-primary px-4 py-2 font-medium text-primary-foreground transition hover:bg-secondary hover:text-secondary-foreground sm:inline-flex"
-						>
-							Contact
-						</a>
 					</div>
 				</nav>
 			</div>

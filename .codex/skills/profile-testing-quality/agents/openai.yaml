@@ -1,0 +1,4 @@
+interface:
+  display_name: "Profile Testing Quality"
+  short_description: "Validate changes with lint, types, and focused Vitest coverage."
+  default_prompt: "Use this skill when adding tests, fixing regressions, reviewing quality, or validating changes in this project."
