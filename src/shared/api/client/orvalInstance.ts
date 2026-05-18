@@ -72,5 +72,5 @@ export const portfolioCustomInstance = async <T>(
 	return parseResponse<T>(response);
 };
 
-export type ErrorType<Error> = ApiError;
+export type ErrorType<_Error> = ApiError;
 export type BodyType<BodyData> = BodyData;

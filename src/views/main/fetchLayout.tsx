@@ -8,10 +8,17 @@ import {
 	serverGetMainPageProjects,
 	serverGetMainPageWorkExperience,
 } from '@/shared/api/generated/portfolio/server/main-page/main-page';
+import type { ServerApiOptions } from '@/shared/api/server/orvalInstance';
 
 interface IMainPageFetchLayoutProps {
 	children: React.ReactNode;
 }
+
+const publicStaticRequestOptions = {
+	auth: 'none',
+	cache: 'force-cache',
+} satisfies ServerApiOptions;
+
 export const MainPageFetchLayout = async ({
 	children,
 }: IMainPageFetchLayoutProps) => {
@@ -19,11 +26,12 @@ export const MainPageFetchLayout = async ({
 	await Promise.all([
 		queryClient.prefetchQuery({
 			queryKey: ['serverGetMainPageProjects'],
-			queryFn: serverGetMainPageProjects,
+			queryFn: () => serverGetMainPageProjects(publicStaticRequestOptions),
 		}),
 		queryClient.prefetchQuery({
 			queryKey: ['serverGetMainPageWorkExperience'],
-			queryFn: serverGetMainPageWorkExperience,
+			queryFn: () =>
+				serverGetMainPageWorkExperience(publicStaticRequestOptions),
 		}),
 	]);
 	return (

@@ -5,19 +5,16 @@ import { redirect } from 'next/navigation';
 
 import { getLocale } from 'next-intl/server';
 
-import {
-	ACCESS_TOKEN_COOKIE,
-	REFRESH_TOKEN_COOKIE,
-} from './auth/cookies';
+import { ACCESS_TOKEN_COOKIE, REFRESH_TOKEN_COOKIE } from './auth/cookies';
 import { refreshViaUpstream } from './auth/upstreamAuthClient';
 import { parseResponse } from '../transport/parseResponse';
 
 const API_URL = process.env.API_URL ?? process.env.NEXT_PUBLIC_API_URL;
 const LOGIN_PATH = '/login';
 
-type ServerApiAuthMode = 'optional' | 'required';
+type ServerApiAuthMode = 'none' | 'optional' | 'required';
 
-type ServerApiOptions = RequestInit & {
+export type ServerApiOptions = RequestInit & {
 	auth?: ServerApiAuthMode;
 };
 
@@ -38,9 +35,10 @@ export const serverApi = async <T>(
 	}
 
 	const { auth = 'optional', ...requestOptions } = options;
-	const [cookieStore, locale] = await Promise.all([cookies(), getLocale()]);
-	const accessToken = cookieStore.get(ACCESS_TOKEN_COOKIE)?.value;
-	const refreshToken = cookieStore.get(REFRESH_TOKEN_COOKIE)?.value;
+	const locale = await getLocale();
+	const cookieStore = auth === 'none' ? null : await cookies();
+	const accessToken = cookieStore?.get(ACCESS_TOKEN_COOKIE)?.value;
+	const refreshToken = cookieStore?.get(REFRESH_TOKEN_COOKIE)?.value;
 	const headers = new Headers(requestOptions.headers);
 
 	headers.set('Accept', 'application/json');

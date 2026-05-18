@@ -5,13 +5,21 @@ import prettierConfig from 'eslint-config-prettier/flat';
 import boundaries from 'eslint-plugin-boundaries';
 import tseslint from 'typescript-eslint';
 
+const nextPlugins = nextVitals[0].plugins;
+
 const eslintConfig = defineConfig([
 	...nextVitals,
 	...nextTs,
 
-	globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
+	globalIgnores([
+		'.next/**',
+		'out/**',
+		'build/**',
+		'next-env.d.ts',
+		'src/shared/api/generated/**',
+	]),
 
-	// All plugins
+	// Project plugins
 	{
 		plugins: {
 			boundaries,
@@ -65,10 +73,63 @@ const eslintConfig = defineConfig([
 			],
 			'@typescript-eslint/no-empty-object-type': 'warn',
 			'@typescript-eslint/no-non-null-assertion': 'warn',
+		},
+	},
 
-			// React basics
+	// React and imports
+	{
+		plugins: {
+			react: nextPlugins.react,
+			import: nextPlugins.import,
+		},
+		rules: {
 			'react/jsx-key': 'error',
 			'react/no-unescaped-entities': 'off',
+			'import/order': [
+				'warn',
+				{
+					groups: [
+						'builtin',
+						'external',
+						'internal',
+						['parent', 'sibling', 'index'],
+						'object',
+						'type',
+					],
+					pathGroups: [
+						{
+							pattern: 'react',
+							group: 'external',
+							position: 'before',
+						},
+						{
+							pattern: 'next/**',
+							group: 'external',
+							position: 'before',
+						},
+						{
+							pattern: '@/**',
+							group: 'internal',
+						},
+						{
+							pattern: './*.scss',
+							group: 'index',
+							position: 'after',
+						},
+						{
+							pattern: './*.css',
+							group: 'index',
+							position: 'after',
+						},
+					],
+					pathGroupsExcludedImportTypes: ['react'],
+					'newlines-between': 'always',
+					alphabetize: {
+						order: 'asc',
+						caseInsensitive: true,
+					},
+				},
+			],
 		},
 	},
 
@@ -198,57 +259,6 @@ const eslintConfig = defineConfig([
 							message: 'Use absolute FSD import from Public API instead.',
 						},
 					],
-				},
-			],
-		},
-	},
-
-	// Imports order
-	{
-		rules: {
-			'import/order': [
-				'warn',
-				{
-					groups: [
-						'builtin',
-						'external',
-						'internal',
-						['parent', 'sibling', 'index'],
-						'object',
-						'type',
-					],
-					pathGroups: [
-						{
-							pattern: 'react',
-							group: 'external',
-							position: 'before',
-						},
-						{
-							pattern: 'next/**',
-							group: 'external',
-							position: 'before',
-						},
-						{
-							pattern: '@/**',
-							group: 'internal',
-						},
-						{
-							pattern: './*.scss',
-							group: 'index',
-							position: 'after',
-						},
-						{
-							pattern: './*.css',
-							group: 'index',
-							position: 'after',
-						},
-					],
-					pathGroupsExcludedImportTypes: ['react'],
-					'newlines-between': 'always',
-					alphabetize: {
-						order: 'asc',
-						caseInsensitive: true,
-					},
 				},
 			],
 		},

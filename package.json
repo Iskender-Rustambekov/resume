@@ -8,6 +8,11 @@
 		"start": "next start",
 		"lint": "eslint",
 		"lint:fix": "eslint --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"prepare": "husky",
+		"precommit": "lint-staged && pnpm lint",
+		"prepush": "pnpm build && pnpm test:run",
 		"test": "vitest",
 		"test:run": "vitest run",
 		"test:coverage": "vitest run --coverage",
@@ -49,7 +54,9 @@
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-boundaries": "^6.0.2",
 		"eslint-plugin-import": "^2.32.0",
+		"husky": "^9.1.7",
 		"jsdom": "^29.1.1",
+		"lint-staged": "^17.0.5",
 		"orval": "^8.9.1",
 		"prettier": "^3.8.3",
 		"shadcn": "^4.6.0",
@@ -58,6 +65,9 @@
 		"typescript": "^5",
 		"typescript-eslint": "^8.59.1",
 		"vitest": "^4.1.5"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,json,css,md,mdx,yml,yaml}": "prettier --write"
 	},
 	"packageManager": "pnpm@11.1.1+sha512.d1fdf5f73c617b64fa1a56a81c3c8dfe0e966e33a6010aa256b517ae77be21d93e05affc0de1a83b0e4f29d569f68b446ae8f068cd7247c0bb3df0fb4d7bdf9a"
 }

@@ -8,12 +8,13 @@ import { TanstackProvider } from './tanstack';
 
 interface IMainProviderProps {
 	children: React.ReactNode;
+	locale: string;
 }
 
-export const MainProvider = ({ children }: IMainProviderProps) => {
+export const MainProvider = ({ children, locale }: IMainProviderProps) => {
 	return (
 		<div>
-			<LocaleProvider>
+			<LocaleProvider locale={locale}>
 				<TanstackProvider>
 					<ThemeProvider>
 						<TooltipProvider>{children}</TooltipProvider>

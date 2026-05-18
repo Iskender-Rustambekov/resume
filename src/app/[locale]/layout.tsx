@@ -2,6 +2,9 @@ import { Geist, JetBrains_Mono } from 'next/font/google';
 
 import '@/shared/styles/index.css';
 
+import { buildRootMetadata, type AppLocale } from '@/shared/config/seo';
+import { routing } from '@/shared/lib/i18n/routing';
+
 import { MainProvider } from '../_providers';
 
 import type { Metadata } from 'next';
@@ -16,10 +19,24 @@ const geistSans = Geist({
 	subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-	title: 'Frontend Developer Portfolio',
-	description: 'Premium frontend portfolio built with Next.js, React and GSAP.',
+interface ILocaleParams {
+	locale: string;
+}
+
+interface IMetadataProps {
+	params: Promise<ILocaleParams>;
+}
+
+export const generateMetadata = async ({
+	params,
+}: IMetadataProps): Promise<Metadata> => {
+	const { locale } = await params;
+
+	return buildRootMetadata(locale as AppLocale);
 };
+
+export const generateStaticParams = () =>
+	routing.locales.map((locale) => ({ locale }));
 
 interface IRootLayoutProps {
 	children: React.ReactNode;
@@ -40,7 +57,7 @@ export default async function RootLayout({
 			className={`${geistSans.variable} ${jetBrainsMono.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col font-sans">
-				<MainProvider>{children}</MainProvider>
+				<MainProvider locale={locale}>{children}</MainProvider>
 			</body>
 		</html>
 	);
