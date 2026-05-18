@@ -77,29 +77,9 @@
 		color-mix(in oklch, var(--foreground) 16%, transparent);
 }
 
-.contentInner {
-	position: relative;
-	z-index: 1;
-}
 
-.animeGrid {
-	pointer-events: none;
-	background:
-		linear-gradient(
-			115deg,
-			transparent 0 46%,
-			color-mix(in oklch, var(--foreground) 8%, transparent) 46.1% 46.35%,
-			transparent 46.45%
-		),
-		linear-gradient(
-			65deg,
-			transparent 0 58%,
-			color-mix(in oklch, var(--primary) 10%, transparent) 58.1% 58.3%,
-			transparent 58.4%
-		);
-	background-size: 440px 440px;
-	opacity: 1;
-}
+
+
 
 .speedLines {
 	background:

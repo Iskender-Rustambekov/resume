@@ -1,17 +1,21 @@
 'use client';
 import Image from 'next/image';
 
+import { useTranslations } from 'next-intl';
+
 import { svgIcons } from '@/shared/assets/icons';
 import { SectionHeading, Marquee } from '@/shared/ui/components';
 import { splitArray } from '@/shared/utils';
 
 export const StackSection = () => {
+	const t = useTranslations('mainPage.stack');
+
 	return (
 		<section className="container grid gap-10 py-24">
 			<SectionHeading
 				motion="reveal"
-				kicker="Stack"
-				title="Technologies I use in production."
+				kicker={t('kicker')}
+				title={t('title')}
 			/>
 
 			<div className="relative grid gap-3 overflow-hidden rounded-xl bg-[url('/media/images/main-page/space.jpg')] bg-cover bg-center py-4 mask-[linear-gradient(to_right,transparent,black_12%,black_88%,transparent)] md:gap-4">

@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 
 import { useQuery } from '@tanstack/react-query';
+import { useTranslations } from 'next-intl';
 
 import { getMainPageProjects } from '@/shared/api/generated/portfolio/endpoints/main-page/main-page';
 import { type Project } from '@/shared/api/generated/portfolio/types';
@@ -21,6 +22,7 @@ import {
 import styles from './styles.module.css';
 
 export const ProjectTerminal = () => {
+	const t = useTranslations('projectTerminal');
 	const { data: projects = [] } = useQuery({
 		queryKey: ['serverGetMainPageProjects'],
 		queryFn: getMainPageProjects,
@@ -30,9 +32,23 @@ export const ProjectTerminal = () => {
 	const activeProject = projects[activeProjectIndex];
 
 	const terminalLines = useMemo(
-		() => getTerminalLines(activeProject, activeProjectIndex, projects.length),
-		[activeProject, activeProjectIndex, projects.length],
+		() =>
+			getTerminalLines(activeProject, {
+				loading: t('loading', {
+					current: String(activeProjectIndex + 1).padStart(2, '0'),
+					total: projects.length,
+				}),
+				toolsLoaded: t('toolsLoaded', {
+					count: activeProject?.stack.length ?? 0,
+				}),
+				redacted: t('redacted'),
+			}),
+		[activeProject, activeProjectIndex, projects.length, t],
 	);
+
+	if (!activeProject) {
+		return null;
+	}
 
 	return (
 		<div
@@ -46,13 +62,14 @@ export const ProjectTerminal = () => {
 			<div className="relative z-1 grid min-h-172 lg:grid-cols-[20rem_1fr]">
 				{/* ============== Sidebar ============== */}
 				<aside className="grid content-start border-b border-primary/25 bg-secondary-foreground p-4 lg:border-r lg:border-b-0">
-					<p className="text-[0.78rem] opacity-80">Available commands</p>
+					<p className="text-[0.78rem] opacity-80">{t('availableCommands')}</p>
 
 					<div className="mt-4 grid gap-2">
 						{projects.map((project, index) => (
 							<ProjectCommand
 								key={project.title}
 								commandSlug={toCommandSlug(project.title)}
+								runLabel={t('run')}
 								isActive={index === activeProjectIndex}
 								onSelect={() => setActiveProjectIndex(index)}
 							/>
@@ -72,10 +89,15 @@ export const ProjectTerminal = () => {
 						<ProjectSummary
 							project={activeProject}
 							projectNumber={activeProjectIndex + 1}
+							activeCaseLabel={t('activeCase')}
 						/>
 
 						{/* Facts & Stack */}
-						<ProjectDetails project={activeProject} />
+						<ProjectDetails
+							project={activeProject}
+							factsLabel={t('facts')}
+							stackLabel={t('stack')}
+						/>
 
 						<div className="grid gap-2 pt-[0.35rem]">
 							{terminalLines.map((line, index) => (
@@ -86,7 +108,7 @@ export const ProjectTerminal = () => {
 								/>
 							))}
 						</div>
-						<TerminalCommand command="ready for next command" />
+						<TerminalCommand command={t('readyCommand')} />
 					</div>
 				</div>
 			</div>
@@ -95,24 +117,27 @@ export const ProjectTerminal = () => {
 };
 
 const getTerminalLines = (
-	project: Project,
-	activeProjectIndex: number,
-	totalProjects: number,
+	project: Project | undefined,
+	labels: {
+		loading: string;
+		toolsLoaded: string;
+		redacted: string;
+	},
 ): TTerminalLine[] => [
 	{
 		kind: 'muted',
-		text: `Loading public case ${String(activeProjectIndex + 1).padStart(2, '0')} of ${totalProjects}...`,
+		text: labels.loading,
 	},
-	{ kind: 'success', prefix: 'CASE', text: project.title },
-	{ kind: 'info', prefix: 'MODE', text: project.kicker },
+	{ kind: 'success', prefix: 'CASE', text: project?.title ?? '' },
+	{ kind: 'info', prefix: 'MODE', text: project?.kicker ?? '' },
 	{
 		kind: 'warn',
 		prefix: 'STACK',
-		text: `${project.stack.length} tools loaded`,
+		text: labels.toolsLoaded,
 	},
 	{
 		kind: 'muted',
-		text: 'Confidential details redacted. Public signal ready.',
+		text: labels.redacted,
 	},
 ];
 

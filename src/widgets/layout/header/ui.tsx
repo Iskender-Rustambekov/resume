@@ -1,11 +1,21 @@
 'use client';
 
 import { SparkleIcon } from '@phosphor-icons/react';
+import { useTranslations } from 'next-intl';
 
 import { LocaleSwitch } from '@/entities/locale';
 import { ThemeSwitch } from '@/entities/theme';
 
 export const Header = () => {
+	const t = useTranslations('header');
+	const navItems = [
+		{ label: t('nav.origin'), href: '#origin' },
+		{ label: t('nav.projects'), href: '#projects' },
+		{ label: t('nav.work'), href: '#craft' },
+		{ label: t('nav.experience'), href: '#experience' },
+		{ label: t('nav.contact'), href: '#contact' },
+	];
+
 	return (
 		<header className="fixed w-full z-40 top-4">
 			<div className="container">
@@ -20,7 +30,7 @@ export const Header = () => {
 						<span className="grid size-7 place-items-center rounded-full bg-primary text-primary-foreground">
 							<SparkleIcon className="size-4" weight="fill" />
 						</span>
-						<span className="hidden font-medium sm:inline">Portfolio</span>
+						<span className="hidden font-medium sm:inline">{t('brand')}</span>
 					</a>
 					<div className="hidden items-center gap-1 md:flex">
 						{navItems.map((item) => (
@@ -42,11 +52,3 @@ export const Header = () => {
 		</header>
 	);
 };
-
-const navItems = [
-	{ label: 'Origin', href: '#origin' },
-	{ label: 'Projects', href: '#projects' },
-	{ label: 'Work', href: '#craft' },
-	{ label: 'Experience', href: '#experience' },
-	{ label: 'Contact', href: '#contact' },
-];

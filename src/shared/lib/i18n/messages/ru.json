@@ -1,5 +1,83 @@
 {
 	"common": {
-		"title": "Привет мир"
+		"title": "Портфолио"
+	},
+	"header": {
+		"brand": "Портфолио",
+		"nav": {
+			"origin": "Начало",
+			"projects": "Проекты",
+			"work": "Подход",
+			"experience": "Опыт",
+			"contact": "Контакты"
+		}
+	},
+	"mainPage": {
+		"hero": {
+			"kicker": "Frontend Engineer / React TypeScript Engineer",
+			"title": "Frontend",
+			"titleAccent": "Viltrumite.",
+			"description": "4+ года коммерческого опыта в разработке веб-продуктов на React, Next.js и TypeScript. Фокус на сложной продуктовой логике, API-нагруженных сценариях, real-time поведении и frontend-архитектуре для масштабируемых приложений.",
+			"projectsCta": "Смотреть проекты",
+			"githubCta": "GitHub",
+			"imageAlt": "Изображение frontend-разработчика"
+		},
+		"projects": {
+			"kicker": "Избранные проекты",
+			"title": "Работы, показанные как терминальная сессия."
+		},
+		"craft": {
+			"kicker": "Подход",
+			"title": "Как я превращаю продуктовую сложность во frontend-системы."
+		},
+		"experience": {
+			"kicker": "Опыт",
+			"title": "Где происходила эта работа.",
+			"range": "2021 - 2026",
+			"summary": "Удаленная, офисная, контрактная и конфиденциальная продуктовая работа.",
+			"description": "Этот блок показывает карту опыта: даты, роли и форматы работы. Детали проектов выше, где их удобнее сравнивать.",
+			"languages": "Языки",
+			"languagesDescription": "Комфортно работаю с локальными командами и англоязычным продуктовым контекстом.",
+			"english": "Английский B1",
+			"russian": "Русский родной",
+			"kyrgyz": "Кыргызский родной"
+		},
+		"stack": {
+			"kicker": "Стек",
+			"title": "Технологии, которые я использую в продакшене."
+		},
+		"contact": {
+			"kicker": "Контакты",
+			"title": "Открыт к удаленным frontend-вакансиям.",
+			"email": "Email",
+			"github": "GitHub",
+			"linkedin": "LinkedIn",
+			"telegram": "Telegram",
+			"cv": "CV"
+		},
+		"footer": {
+			"caption": "Frontend-портфолио в формате выразительной продуктовой системы.",
+			"location": "Бишкек / Удаленно"
+		}
+	},
+	"projectTerminal": {
+		"availableCommands": "Доступные команды",
+		"run": "run",
+		"activeCase": "АКТИВНЫЙ КЕЙС",
+		"facts": "ФАКТЫ",
+		"stack": "СТЕК",
+		"loading": "Загружается публичный кейс {current} из {total}...",
+		"toolsLoaded": "Загружено инструментов: {count}",
+		"redacted": "Конфиденциальные детали скрыты. Публичное описание готово.",
+		"readyCommand": "готов к следующей команде"
+	},
+	"login": {
+		"title": "Вход",
+		"description": "Возвращение в рабочую область портфолио.",
+		"email": "Email",
+		"password": "Пароль",
+		"invalidCredentials": "Неверный email или пароль.",
+		"submit": "Войти",
+		"submitting": "Вход..."
 	}
 }

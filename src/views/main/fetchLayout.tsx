@@ -4,7 +4,10 @@ import {
 	QueryClient,
 } from '@tanstack/react-query';
 
-import { serverGetMainPageProjects } from '@/shared/api/generated/portfolio/server/main-page/main-page';
+import {
+	serverGetMainPageProjects,
+	serverGetMainPageWorkExperience,
+} from '@/shared/api/generated/portfolio/server/main-page/main-page';
 
 interface IMainPageFetchLayoutProps {
 	children: React.ReactNode;
@@ -17,6 +20,10 @@ export const MainPageFetchLayout = async ({
 		queryClient.prefetchQuery({
 			queryKey: ['serverGetMainPageProjects'],
 			queryFn: serverGetMainPageProjects,
+		}),
+		queryClient.prefetchQuery({
+			queryKey: ['serverGetMainPageWorkExperience'],
+			queryFn: serverGetMainPageWorkExperience,
 		}),
 	]);
 	return (

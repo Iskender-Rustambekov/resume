@@ -61,12 +61,14 @@ export const TerminalCommand = ({ command }: ITerminalCommandProps) => {
 // ===============================================
 interface IProjectCommandProps {
 	commandSlug: string;
+	runLabel: string;
 	isActive: boolean;
 	onSelect: () => void;
 }
 
 export const ProjectCommand = ({
 	commandSlug,
+	runLabel,
 	isActive,
 	onSelect,
 }: IProjectCommandProps) => (
@@ -78,7 +80,7 @@ export const ProjectCommand = ({
 			isActive && 'translate-x-1 border-primary bg-card/60 shadow-inner',
 		)}
 	>
-		<span className="text-primary">run</span>
+		<span className="text-primary">{runLabel}</span>
 		<span>case:{commandSlug}</span>
 	</button>
 );
@@ -87,11 +89,13 @@ export const ProjectCommand = ({
 interface IProjectSummaryProps {
 	project: Project;
 	projectNumber: number;
+	activeCaseLabel: string;
 }
 
 export const ProjectSummary = ({
 	project,
 	projectNumber,
+	activeCaseLabel,
 }: IProjectSummaryProps) => (
 	<div
 		className={cn(
@@ -102,7 +106,7 @@ export const ProjectSummary = ({
 		style={{ '--terminal-delay': '360ms' } as CSSProperties}
 	>
 		<div>
-			<p className="text-[0.78rem] opacity-80">ACTIVE CASE</p>
+			<p className="text-[0.78rem] opacity-80">{activeCaseLabel}</p>
 			<h3 className="mt-[0.45rem] text-[clamp(2rem,5vw,4.4rem)] leading-[0.95] font-bold text-white">
 				{project.title}
 			</h3>
@@ -124,9 +128,15 @@ export const ProjectSummary = ({
 // ===============================================
 interface IProjectDetailsProps {
 	project: Project;
+	factsLabel: string;
+	stackLabel: string;
 }
 
-export const ProjectDetails = ({ project }: IProjectDetailsProps) => (
+export const ProjectDetails = ({
+	project,
+	factsLabel,
+	stackLabel,
+}: IProjectDetailsProps) => (
 	<div
 		className={cn(
 			styles.terminalReveal,
@@ -135,7 +145,7 @@ export const ProjectDetails = ({ project }: IProjectDetailsProps) => (
 		style={{ '--terminal-delay': '520ms' } as CSSProperties}
 	>
 		<div className="rounded-2xl border border-primary/25 bg-secondary-foreground p-[0.95rem]">
-			<p className="text-[0.78rem] opacity-80">FACTS</p>
+			<p className="text-[0.78rem] opacity-80">{factsLabel}</p>
 
 			<div className="mt-3 grid gap-2">
 				{project.facts.map((fact, index) => (
@@ -154,7 +164,7 @@ export const ProjectDetails = ({ project }: IProjectDetailsProps) => (
 		</div>
 
 		<div className="rounded-2xl border border-primary/25 bg-secondary-foreground p-[0.95rem]">
-			<p className="text-[0.78rem] opacity-80">STACK</p>
+			<p className="text-[0.78rem] opacity-80">{stackLabel}</p>
 
 			<div
 				className={cn(

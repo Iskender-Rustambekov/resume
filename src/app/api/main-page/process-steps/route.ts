@@ -1,4 +1,4 @@
-import { getProcessStepsResponse } from '../data';
+import { getProcessStepsResponse } from '../_data/processSteps';
 
 export const dynamic = 'force-dynamic';
 

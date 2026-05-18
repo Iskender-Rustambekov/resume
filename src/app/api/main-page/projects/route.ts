@@ -1,4 +1,4 @@
-import { getProjectsResponse } from '../data';
+import { getProjectsResponse } from '../_data/projects';
 
 export const dynamic = 'force-dynamic';
 

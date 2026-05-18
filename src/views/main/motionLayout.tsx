@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 
-import { useMainPageMotion } from './lib/useMainPageMotion';
+import { useMainPageMotion } from './motion';
 
 interface IMotionLayoutProps {
 	children: React.ReactNode;

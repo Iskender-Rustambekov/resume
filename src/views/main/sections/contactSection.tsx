@@ -1,16 +1,22 @@
-'use client';
 import {
-	EnvelopeSimpleIcon,
 	FileTextIcon,
 	GithubLogoIcon,
 	LinkedinLogoIcon,
 	TelegramLogoIcon,
-} from '@phosphor-icons/react';
+	EnvelopeSimpleIcon,
+} from '@phosphor-icons/react/dist/ssr';
+import { getTranslations } from 'next-intl/server';
 
-import { contactLinks } from '../model';
+import { serverGetMainPageContactLinks } from '@/shared/api/generated/portfolio/server/main-page/main-page';
+
 import styles from '../main-page.module.css';
 
-export const ContactSection = () => {
+export const ContactSection = async () => {
+	const [links, t] = await Promise.all([
+		serverGetMainPageContactLinks(),
+		getTranslations('mainPage.contact'),
+	]);
+
 	return (
 		<section id="contact" className="relative py-24">
 			<div className="container">
@@ -22,50 +28,50 @@ export const ContactSection = () => {
 					<div className="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
 						<div>
 							<p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-								Contact
+								{t('kicker')}
 							</p>
 							<h2 className="max-w-4xl text-[clamp(3rem,8vw,8rem)] font-semibold leading-[0.9] tracking-normal">
-								Open to remote frontend opportunities.
+								{t('title')}
 							</h2>
 						</div>
 						<div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col">
 							<a
-								href={contactLinks.email}
+								href={links.email}
 								className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground transition hover:bg-secondary hover:text-secondary-foreground"
 							>
 								<EnvelopeSimpleIcon className="size-5" weight="bold" />
-								Email
+								{t('email')}
 							</a>
 							<a
-								href={contactLinks.github}
+								href={links.github}
 								target="_blank"
 								className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
 							>
 								<GithubLogoIcon className="size-5" weight="bold" />
-								GitHub
+								{t('github')}
 							</a>
 							<a
-								href={contactLinks.linkedin}
+								href={links.linkedin}
 								target="_blank"
 								className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
 							>
 								<LinkedinLogoIcon className="size-5" weight="bold" />
-								LinkedIn
+								{t('linkedin')}
 							</a>
 							<a
-								href={contactLinks.telegram}
+								href={links.telegram}
 								target="_blank"
 								className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
 							>
 								<TelegramLogoIcon className="size-5" weight="bold" />
-								Telegram
+								{t('telegram')}
 							</a>
 							<a
-								href={contactLinks.resume}
+								href={links.resume}
 								className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
 							>
 								<FileTextIcon className="size-5" weight="bold" />
-								CV
+								{t('cv')}
 							</a>
 						</div>
 					</div>

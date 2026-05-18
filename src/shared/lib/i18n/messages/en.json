@@ -1,5 +1,83 @@
 {
-  "common": {
-    "title": "Hello world"
-  }
+	"common": {
+		"title": "Portfolio"
+	},
+	"header": {
+		"brand": "Portfolio",
+		"nav": {
+			"origin": "Origin",
+			"projects": "Projects",
+			"work": "Work",
+			"experience": "Experience",
+			"contact": "Contact"
+		}
+	},
+	"mainPage": {
+		"hero": {
+			"kicker": "Frontend Engineer / React TypeScript Engineer",
+			"title": "Frontend",
+			"titleAccent": "Viltrumite.",
+			"description": "4+ years of commercial experience building web products with React, Next.js and TypeScript. Focused on complex product logic, API-heavy flows, real-time behavior and frontend architecture for scalable applications.",
+			"projectsCta": "View projects",
+			"githubCta": "GitHub",
+			"imageAlt": "Frontend developer hero image"
+		},
+		"projects": {
+			"kicker": "Selected projects",
+			"title": "Selected work, presented like a terminal session."
+		},
+		"craft": {
+			"kicker": "Work",
+			"title": "How I turn product complexity into frontend systems."
+		},
+		"experience": {
+			"kicker": "Experience",
+			"title": "Where that work happened.",
+			"range": "2021 - 2026",
+			"summary": "Remote, office, contract and confidential product work.",
+			"description": "This section is the map: dates, roles and environments. The deeper project details live above, where they are easier to compare.",
+			"languages": "Languages",
+			"languagesDescription": "Comfortable across local teams and English-speaking product contexts.",
+			"english": "English B1",
+			"russian": "Russian native",
+			"kyrgyz": "Kyrgyz native"
+		},
+		"stack": {
+			"kicker": "Stack",
+			"title": "Technologies I use in production."
+		},
+		"contact": {
+			"kicker": "Contact",
+			"title": "Open to remote frontend opportunities.",
+			"email": "Email",
+			"github": "GitHub",
+			"linkedin": "LinkedIn",
+			"telegram": "Telegram",
+			"cv": "CV"
+		},
+		"footer": {
+			"caption": "Frontend portfolio, cinematic system edition.",
+			"location": "Bishkek / Remote"
+		}
+	},
+	"projectTerminal": {
+		"availableCommands": "Available commands",
+		"run": "run",
+		"activeCase": "ACTIVE CASE",
+		"facts": "FACTS",
+		"stack": "STACK",
+		"loading": "Loading public case {current} of {total}...",
+		"toolsLoaded": "{count} tools loaded",
+		"redacted": "Confidential details redacted. Public signal ready.",
+		"readyCommand": "ready for next command"
+	},
+	"login": {
+		"title": "Sign in",
+		"description": "Welcome back to the portfolio workspace.",
+		"email": "Email",
+		"password": "Password",
+		"invalidCredentials": "Invalid email or password.",
+		"submit": "Sign in",
+		"submitting": "Signing in..."
+	}
 }

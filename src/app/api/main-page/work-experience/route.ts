@@ -1,4 +1,4 @@
-import { getWorkExperienceResponse } from '../data';
+import { getWorkExperienceResponse } from '../_data/workExperience';
 
 export const dynamic = 'force-dynamic';
 

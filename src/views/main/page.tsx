@@ -20,11 +20,14 @@ export const MainPageView = () => {
 			<MainPageFetchLayout>
 				<div className={`${styles.root} min-h-screen`}>
 					<Header />
-
 					<HeroSection />
-					<div data-motion="post-hero-content" className={styles.contentPanel}>
+
+					<div
+						data-motion="post-hero-content"
+						className="relative z-10 mt-0 pt-[8vh] bg-background border-t border-border rounded-t-[2rem] shadow-[0_-2rem_5rem_rgba(0,0,0,0.16)]"
+					>
 						<ContentParticles />
-						<div className={styles.contentInner}>
+						<div className="relative z-1">
 							<ProjectsSection />
 
 							<ExperienceSection />

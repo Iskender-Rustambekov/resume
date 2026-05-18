@@ -1,4 +1,4 @@
-import { getContactLinksResponse } from '../data';
+import { getContactLinksResponse } from '../_data/contactLinks';
 
 export const dynamic = 'force-dynamic';
 

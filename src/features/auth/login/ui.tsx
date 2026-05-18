@@ -2,6 +2,8 @@
 
 import { useState, type FormEvent } from 'react';
 
+import { useTranslations } from 'next-intl';
+
 import { ROUTES } from '@/shared/config/routes/config';
 import { useRouter } from '@/shared/lib/i18n/navigation';
 import { Button } from '@/shared/ui/shadcn/ui/button';
@@ -11,6 +13,7 @@ const DEMO_EMAIL = 'demo@example.com';
 const DEMO_PASSWORD = 'demo-password';
 
 export const LoginForm = () => {
+	const t = useTranslations('login');
 	const router = useRouter();
 	const [error, setError] = useState<string | null>(null);
 	const [isPending, setIsPending] = useState(false);
@@ -36,7 +39,7 @@ export const LoginForm = () => {
 		setIsPending(false);
 
 		if (!response.ok) {
-			setError('Invalid email or password.');
+			setError(t('invalidCredentials'));
 			return;
 		}
 
@@ -51,7 +54,7 @@ export const LoginForm = () => {
 					htmlFor="email"
 					className="text-xs font-medium text-foreground/80"
 				>
-					Email
+					{t('email')}
 				</label>
 				<Input
 					id="email"
@@ -68,7 +71,7 @@ export const LoginForm = () => {
 					htmlFor="password"
 					className="text-xs font-medium text-foreground/80"
 				>
-					Password
+					{t('password')}
 				</label>
 				<Input
 					id="password"
@@ -87,7 +90,7 @@ export const LoginForm = () => {
 			) : null}
 
 			<Button type="submit" disabled={isPending} className="mt-1 w-full">
-				{isPending ? 'Signing in...' : 'Sign in'}
+				{isPending ? t('submitting') : t('submit')}
 			</Button>
 		</form>
 	);
