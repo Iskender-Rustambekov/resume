@@ -3,6 +3,7 @@ import { ROUTES } from '@/shared/config/routes/config';
 import { parseResponse } from '../transport/parseResponse';
 
 const API_URL = '/api/bff';
+const DIRECT_API_PATHS = ['/api/auth/'];
 
 export class ApiError extends Error {
 	constructor(
@@ -54,7 +55,12 @@ export const portfolioCustomInstance = async <T>(
 		headers.set('Content-Type', 'application/json');
 	}
 
-	const response = await fetch(`${API_URL}${url}`, {
+	const shouldUseDirectApi = DIRECT_API_PATHS.some((path) =>
+		url.startsWith(path),
+	);
+	const requestUrl = shouldUseDirectApi ? url : `${API_URL}${url}`;
+
+	const response = await fetch(requestUrl, {
 		...options,
 		headers,
 	});

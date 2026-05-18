@@ -6,8 +6,12 @@
  * OpenAPI spec version: 1.0.0
  */
 
+export * from './authUser';
 export * from './contactLinks';
+export * from './errorResponse';
 export * from './experienceItem';
+export * from './loginRequest';
+export * from './loginResponse';
 export * from './processStep';
 export * from './project';
 export * from './projectAccent';

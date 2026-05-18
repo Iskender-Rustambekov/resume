@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, type FormEvent } from 'react';
+import { type FormEvent } from 'react';
 
 import { useTranslations } from 'next-intl';
 
+import { useLogin } from '@/shared/api/generated/portfolio/endpoints/auth/auth';
 import { ROUTES } from '@/shared/config/routes/config';
 import { useRouter } from '@/shared/lib/i18n/navigation';
 import { Button } from '@/shared/ui/shadcn/ui/button';
@@ -15,36 +16,32 @@ const DEMO_PASSWORD = 'demo-password';
 export const LoginForm = () => {
 	const t = useTranslations('login');
 	const router = useRouter();
-	const [error, setError] = useState<string | null>(null);
-	const [isPending, setIsPending] = useState(false);
+	const loginMutation = useLogin({
+		mutation: {
+			onSuccess: () => {
+				router.replace(ROUTES.home);
+				router.refresh();
+			},
+		},
+	});
 
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		setError(null);
-		setIsPending(true);
 
 		const formData = new FormData(event.currentTarget);
-		const response = await fetch('/api/auth/login', {
-			body: JSON.stringify({
-				email: formData.get('email'),
-				password: formData.get('password'),
-			}),
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-			method: 'POST',
-		});
+		const email = formData.get('email');
+		const password = formData.get('password');
 
-		setIsPending(false);
-
-		if (!response.ok) {
-			setError(t('invalidCredentials'));
+		if (typeof email !== 'string' || typeof password !== 'string') {
 			return;
 		}
 
-		router.replace(ROUTES.home);
-		router.refresh();
+		loginMutation.mutate({
+			data: {
+				email,
+				password,
+			},
+		});
 	};
 
 	return (
@@ -83,14 +80,18 @@ export const LoginForm = () => {
 				/>
 			</div>
 
-			{error ? (
+			{loginMutation.isError ? (
 				<p className="text-xs text-destructive" role="alert">
-					{error}
+					{t('invalidCredentials')}
 				</p>
 			) : null}
 
-			<Button type="submit" disabled={isPending} className="mt-1 w-full">
-				{isPending ? t('submitting') : t('submit')}
+			<Button
+				type="submit"
+				disabled={loginMutation.isPending}
+				className="mt-1 w-full"
+			>
+				{loginMutation.isPending ? t('submitting') : t('submit')}
 			</Button>
 		</form>
 	);
