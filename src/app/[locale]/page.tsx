@@ -14,7 +14,7 @@ export default async function Home({ params }: IHomeProps) {
 	return (
 		<>
 			<MainPageStructuredData locale={appLocale} />
-			<MainPageView />
+			{/* <MainPageView /> */}
 		</>
 	);
 }
