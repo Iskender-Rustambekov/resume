@@ -5,18 +5,18 @@ import { localizedResponse } from '../_lib/localizedResponse';
 
 const contactLinksByLocale: Record<MainPageLocale, ContactLinks> = {
 	en: {
-		email: 'mailto:your.email@example.com',
-		github: 'https://github.com/your-username',
-		linkedin: 'https://www.linkedin.com/in/your-username',
-		telegram: 'https://t.me/your_username',
-		resume: '#',
+		email: 'mailto:merlin.monro.2333@gmail.com',
+		github: 'https://github.com/Iskender-Rustambekov/resume',
+		linkedin: 'https://www.linkedin.com/in/iskender-rustambekov-b3b539237/',
+		telegram: 'https://t.me/sogeking228',
+		resume: '/media/resume/iskender-rustambekov-resume-en.pdf',
 	},
 	ru: {
-		email: 'mailto:your.email@example.com',
-		github: 'https://github.com/your-username',
-		linkedin: 'https://www.linkedin.com/in/your-username',
-		telegram: 'https://t.me/your_username',
-		resume: '#',
+		email: 'mailto:merlin.monro.2333@gmail.com',
+		github: 'https://github.com/Iskender-Rustambekov/resume',
+		linkedin: 'https://www.linkedin.com/in/iskender-rustambekov-b3b539237/',
+		telegram: 'https://t.me/sogeking228',
+		resume: '/media/resume/iskender-rustambekov-resume-ru.pdf',
 	},
 };
 

@@ -8,14 +8,9 @@ import {
 import { getTranslations } from 'next-intl/server';
 
 import { serverGetMainPageContactLinks } from '@/shared/api/generated/portfolio/server/main-page/main-page';
-import type { ServerApiOptions } from '@/shared/api/server/orvalInstance';
+import { publicStaticRequestOptions } from '@/shared/api/server/requestOptions';
 
-import styles from '../main-page.module.css';
-
-const publicStaticRequestOptions = {
-	auth: 'none',
-	cache: 'force-cache',
-} satisfies ServerApiOptions;
+import styles from '../styles.module.css';
 
 export const ContactSection = async () => {
 	const [links, t] = await Promise.all([

@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Iskender Rustambekov - Frontend Engineer Resume</title>
+		<style>
+			@page {
+				size: A4;
+				margin: 0;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				background: #e9edf3;
+				color: #121722;
+				font-family:
+					Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+					"Segoe UI", sans-serif;
+				font-size: 9.35px;
+				line-height: 1.36;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			.page {
+				position: relative;
+				width: 210mm;
+				min-height: 297mm;
+				margin: 0 auto;
+				overflow: hidden;
+				background:
+					radial-gradient(circle at 100% 0%, rgba(48, 120, 255, 0.16), transparent 35%),
+					linear-gradient(135deg, #f9fbff 0%, #f3f6fb 44%, #ffffff 100%);
+				box-shadow: 0 18px 60px rgba(21, 30, 45, 0.18);
+			}
+
+			.page::before {
+				position: absolute;
+				inset: 0 0 auto;
+				height: 6.5mm;
+				background: linear-gradient(90deg, #121722, #2557d6 44%, #10a37f 100%);
+				content: "";
+			}
+
+			.content {
+				position: relative;
+				z-index: 1;
+				display: grid;
+				grid-template-columns: 61mm 1fr;
+				gap: 7mm;
+				padding: 14mm 11mm 10mm;
+			}
+
+			.header {
+				grid-column: 1 / -1;
+				display: grid;
+				grid-template-columns: 1fr 72mm;
+				gap: 10mm;
+				align-items: end;
+				padding-bottom: 5mm;
+				border-bottom: 1px solid rgba(18, 23, 34, 0.16);
+			}
+
+			.name {
+				margin: 0;
+				font-size: 30px;
+				line-height: 0.96;
+				letter-spacing: 0;
+				color: #0e1320;
+			}
+
+			.role {
+				margin: 3mm 0 0;
+				color: #2557d6;
+				font-size: 12px;
+				font-weight: 800;
+				letter-spacing: 0;
+				text-transform: uppercase;
+			}
+
+			.summary {
+				margin: 0;
+				color: #3b4658;
+				font-size: 10px;
+			}
+
+			.contact {
+				display: grid;
+				gap: 1.4mm;
+				color: #30394a;
+				font-size: 8.6px;
+				text-align: right;
+			}
+
+			.contact strong {
+				color: #121722;
+				font-weight: 800;
+			}
+
+			.sidebar,
+			.main {
+				display: grid;
+				align-content: start;
+				gap: 4.2mm;
+			}
+
+			.section {
+				break-inside: avoid;
+			}
+
+			.section-title {
+				display: flex;
+				align-items: center;
+				gap: 2.2mm;
+				margin: 0 0 2.4mm;
+				color: #101624;
+				font-size: 10px;
+				font-weight: 900;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+
+			.section-title::before {
+				width: 4.4mm;
+				height: 1.5mm;
+				background: #2557d6;
+				content: "";
+			}
+
+			.panel {
+				padding: 3.2mm;
+				border: 1px solid rgba(18, 23, 34, 0.12);
+				background: rgba(255, 255, 255, 0.72);
+			}
+
+			.skills {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.2mm;
+			}
+
+			.skill {
+				padding: 1mm 1.8mm;
+				border: 1px solid rgba(37, 87, 214, 0.2);
+				background: rgba(37, 87, 214, 0.065);
+				color: #172544;
+				font-size: 8.45px;
+				font-weight: 700;
+			}
+
+			.metric-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2mm;
+			}
+
+			.metric {
+				padding: 2.4mm;
+				background: #121722;
+				color: #ffffff;
+			}
+
+			.metric b {
+				display: block;
+				font-size: 13px;
+			}
+
+			.metric span {
+				color: rgba(255, 255, 255, 0.72);
+				font-size: 7.9px;
+			}
+
+			.list {
+				display: grid;
+				gap: 1.7mm;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.list li {
+				position: relative;
+				padding-left: 3.3mm;
+				color: #374255;
+			}
+
+			.list li::before {
+				position: absolute;
+				top: 1.55mm;
+				left: 0;
+				width: 1.35mm;
+				height: 1.35mm;
+				background: #10a37f;
+				content: "";
+			}
+
+			.job {
+				display: grid;
+				grid-template-columns: 1fr 34mm;
+				gap: 3mm;
+				padding-bottom: 3mm;
+				border-bottom: 1px solid rgba(18, 23, 34, 0.1);
+				break-inside: avoid;
+			}
+
+			.job:last-child {
+				padding-bottom: 0;
+				border-bottom: 0;
+			}
+
+			.job h3,
+			.project h3 {
+				margin: 0;
+				color: #111725;
+				font-size: 10.8px;
+				line-height: 1.12;
+			}
+
+			.job .company,
+			.project .kicker {
+				margin-top: 0.7mm;
+				color: #2557d6;
+				font-weight: 800;
+				font-size: 8.6px;
+			}
+
+			.job p,
+			.project p {
+				margin: 1.4mm 0 0;
+				color: #3b4658;
+			}
+
+			.meta {
+				color: #536070;
+				font-size: 8.2px;
+				text-align: right;
+			}
+
+			.stack-line {
+				margin-top: 1.3mm;
+				color: #5b6474;
+				font-size: 8.05px;
+				font-weight: 700;
+			}
+
+			.projects {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2.4mm;
+			}
+
+			.project {
+				padding: 2.8mm;
+				border-left: 1.5mm solid #2557d6;
+				background: rgba(255, 255, 255, 0.72);
+				break-inside: avoid;
+			}
+
+			.project:nth-child(2),
+			.project:nth-child(4) {
+				border-color: #10a37f;
+			}
+
+			.footer-note {
+				color: #5b6474;
+				font-size: 7.8px;
+			}
+
+			@media print {
+				body {
+					background: #ffffff;
+				}
+
+				.page {
+					box-shadow: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main class="page">
+			<div class="content">
+				<header class="header">
+					<div>
+						<h1 class="name">Iskender Rustambekov</h1>
+						<p class="role">Frontend Engineer / React TypeScript Engineer</p>
+					</div>
+					<div class="contact" aria-label="Contact links">
+						<a href="mailto:merlin.monro.2333@gmail.com"><strong>Email</strong> merlin.monro.2333@gmail.com</a>
+						<a href="https://t.me/sogeking228"><strong>Telegram</strong> @sogeking228</a>
+						<a href="https://www.linkedin.com/in/iskender-rustambekov-b3b539237/"><strong>LinkedIn</strong> iskender-rustambekov</a>
+						<a href="https://github.com/Iskender-Rustambekov/resume"><strong>GitHub</strong> Iskender-Rustambekov/resume</a>
+						<span><strong>Location</strong> Bishkek / Remote</span>
+					</div>
+				</header>
+
+				<aside class="sidebar">
+					<section class="section panel">
+						<h2 class="section-title">Profile</h2>
+						<p class="summary">
+							Frontend engineer with 4+ years of commercial experience building web products with React, Next.js and TypeScript. Focused on product logic, API-heavy flows, real-time UI, predictable state and frontend architecture for scalable applications.
+						</p>
+					</section>
+
+					<section class="section panel">
+						<h2 class="section-title">Impact</h2>
+						<div class="metric-grid">
+							<div class="metric"><b>4+</b><span>years commercial frontend</span></div>
+							<div class="metric"><b>5</b><span>production environments</span></div>
+							<div class="metric"><b>Lead</b><span>real-time launcher frontend</span></div>
+							<div class="metric"><b>0-1</b><span>products delivered from scratch</span></div>
+						</div>
+					</section>
+
+					<section class="section panel">
+						<h2 class="section-title">Core Stack</h2>
+						<div class="skills">
+							<span class="skill">React</span>
+							<span class="skill">Next.js</span>
+							<span class="skill">TypeScript</span>
+							<span class="skill">JavaScript</span>
+							<span class="skill">TanStack Query</span>
+							<span class="skill">React Query</span>
+							<span class="skill">Zustand</span>
+							<span class="skill">Redux Toolkit</span>
+							<span class="skill">Tailwind CSS</span>
+							<span class="skill">SCSS</span>
+							<span class="skill">Styled Components</span>
+							<span class="skill">Centrifugo</span>
+							<span class="skill">GSAP</span>
+							<span class="skill">Vitest</span>
+							<span class="skill">FSD</span>
+							<span class="skill">OpenAPI</span>
+						</div>
+					</section>
+
+					<section class="section panel">
+						<h2 class="section-title">Strengths</h2>
+						<ul class="list">
+							<li>Frontend architecture, feature boundaries and shared layers.</li>
+							<li>Typed API contracts, DTO mapping and async loading/error states.</li>
+							<li>Complex product rules: roles, permissions, forms, cache and state transitions.</li>
+							<li>Technical requirements, backend/design alignment and delivery ownership.</li>
+						</ul>
+					</section>
+
+					<section class="section panel">
+						<h2 class="section-title">Languages</h2>
+						<ul class="list">
+							<li>English: B1</li>
+							<li>Russian: native</li>
+							<li>Kyrgyz: native</li>
+						</ul>
+					</section>
+				</aside>
+
+				<section class="main">
+					<section class="section panel">
+						<h2 class="section-title">Experience</h2>
+						<div class="job">
+							<div>
+								<h3>Frontend Web Developer</h3>
+								<div class="company">Confidential company</div>
+								<p>Frontend team lead for a real-time game launcher built from scratch. Owned architecture, API requirements, technical tasks, launcher/game-module flows and stable browser behavior.</p>
+								<div class="stack-line">React.js, TypeScript, Game launcher, Arcade games</div>
+							</div>
+							<div class="meta">Sep 2024 - Jan 2026<br />1 year 5 months<br />Product work</div>
+						</div>
+						<div class="job">
+							<div>
+								<h3>Frontend Web Developer</h3>
+								<div class="company">DATAxWAY</div>
+								<p>Built product interfaces, marketplaces, admin panels and SEO-oriented websites from scratch to production while keeping parallel projects maintainable.</p>
+								<div class="stack-line">React.js, TypeScript, Frontend architecture</div>
+							</div>
+							<div class="meta">Aug 2023 - Jun 2024<br />11 months<br />Bishkek, office</div>
+						</div>
+						<div class="job">
+							<div>
+								<h3>Frontend Web Developer</h3>
+								<div class="company">GetByVerto</div>
+								<p>Delivered Next.js product frontend remotely with typed backend contracts, predictable state and disciplined request handling.</p>
+								<div class="stack-line">Next.js, TypeScript</div>
+							</div>
+							<div class="meta">Aug 2022 - Aug 2023<br />1 year 1 month<br />Remote</div>
+						</div>
+						<div class="job">
+							<div>
+								<h3>Frontend Web Developer</h3>
+								<div class="company">Welive Turkish Company</div>
+								<p>Implemented frontend features for web products in a fast-moving product environment.</p>
+								<div class="stack-line">Next.js, TypeScript</div>
+							</div>
+							<div class="meta">Jan 2022 - Jul 2022<br />7 months<br />Bishkek, office</div>
+						</div>
+						<div class="job">
+							<div>
+								<h3>Frontend Developer</h3>
+								<div class="company">Budgeting OAPiSR</div>
+								<p>Built an internal bank budgeting system with formula logic, tables, branch rules, drag-and-drop and frontend-side auto calculations.</p>
+								<div class="stack-line">Budget systems, Bank branch logic</div>
+							</div>
+							<div class="meta">Oct 2021 - Jan 2022<br />4 months<br />Contract, remote</div>
+						</div>
+					</section>
+
+					<section class="section">
+						<h2 class="section-title">Selected Projects</h2>
+						<div class="projects">
+							<article class="project">
+								<h3>Arcade Launcher</h3>
+								<div class="kicker">Confidential game product</div>
+								<p>Real-time multiplayer arcade game launcher started from zero as frontend team lead.</p>
+								<div class="stack-line">React, TypeScript, TanStack Query, Zustand, Centrifugo, Tailwind</div>
+							</article>
+							<article class="project">
+								<h3>Business Web Systems</h3>
+								<div class="kicker">Outsource delivery</div>
+								<p>Marketplaces, service websites and admin panels delivered to production with SEO and backend clarity.</p>
+								<div class="stack-line">React, Next.js, TypeScript, React Query, Zustand, Tailwind</div>
+							</article>
+							<article class="project">
+								<h3>Exchange Commerce</h3>
+								<div class="kicker">Barter marketplace</div>
+								<p>Marketplace flows where users could pay with money or exchange goods, backed by SSR and state discipline.</p>
+								<div class="stack-line">Next.js, TypeScript, React Query, Zustand, Tailwind</div>
+							</article>
+							<article class="project">
+								<h3>Admin Commerce</h3>
+								<div class="kicker">Marketplace and admin</div>
+								<p>Marketplace with roles and administration: legacy cleanup, performance fixes and clearer feature boundaries.</p>
+								<div class="stack-line">Next.js, TypeScript, Redux Toolkit, SCSS</div>
+							</article>
+						</div>
+					</section>
+
+					<p class="footer-note">
+						Resume generated from portfolio content. Confidential product details are intentionally redacted.
+					</p>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>

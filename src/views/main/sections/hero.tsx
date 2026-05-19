@@ -6,8 +6,14 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 import { getTranslations } from 'next-intl/server';
 
+import { serverGetMainPageContactLinks } from '@/shared/api/generated/portfolio/server/main-page/main-page';
+import { publicStaticRequestOptions } from '@/shared/api/server/requestOptions';
+
 export const HeroSection = async () => {
-	const t = await getTranslations('mainPage.hero');
+	const [links, t] = await Promise.all([
+		serverGetMainPageContactLinks(publicStaticRequestOptions),
+		getTranslations('mainPage.hero'),
+	]);
 
 	return (
 		<section
@@ -22,7 +28,9 @@ export const HeroSection = async () => {
 					</p>
 					<h1 className="max-w-5xl text-[clamp(3.8rem,10vw,9.8rem)] font-semibold leading-[0.86] tracking-normal text-foreground">
 						{t('title')}
-						<span className="block text-muted-foreground">{t('titleAccent')}</span>
+						<span className="block text-muted-foreground">
+							{t('titleAccent')}
+						</span>
 					</h1>
 					<p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
 						{t('description')}
@@ -39,7 +47,7 @@ export const HeroSection = async () => {
 							/>
 						</a>
 						<a
-							href={'/'}
+							href={links?.github}
 							target="_blank"
 							className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
 						>

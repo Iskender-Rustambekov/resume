@@ -65,22 +65,6 @@
 	);
 }
 
-.contentPanel {
-	position: relative;
-	z-index: 10;
-	margin-top: 0;
-	padding-top: 8vh;
-	background: var(--background);
-	border-top: 1px solid color-mix(in oklch, var(--border) 70%, transparent);
-	border-radius: 2rem 2rem 0 0;
-	box-shadow: 0 -2rem 5rem
-		color-mix(in oklch, var(--foreground) 16%, transparent);
-}
-
-
-
-
-
 .speedLines {
 	background:
 		repeating-linear-gradient(

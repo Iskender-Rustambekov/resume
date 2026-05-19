@@ -1,8 +1,8 @@
 import { ContentParticles } from '@/shared/ui/components';
 import { Header } from '@/widgets/layout';
 
-import { MainPageFetchLayout } from './fetchLayout';
-import { MotionLayout } from './motionLayout';
+import { MainPageFetchLayout } from './fetch';
+import { MotionLayout } from './motion';
 import {
 	ContactSection,
 	ExperienceSection,
@@ -12,7 +12,7 @@ import {
 	StackSection,
 } from './sections';
 
-import styles from './main-page.module.css';
+import styles from './styles.module.css';
 
 export const MainPageView = () => {
 	return (
@@ -24,7 +24,7 @@ export const MainPageView = () => {
 
 					<div
 						data-motion="post-hero-content"
-						className="relative z-10 mt-0 pt-[8vh] bg-background border-t border-border rounded-t-[2rem] shadow-[0_-2rem_5rem_rgba(0,0,0,0.16)]"
+						className="relative z-10 mt-0 rounded-t-[2rem] border-t border-border/70 bg-background pt-[8vh] shadow-[0_-2rem_5rem] shadow-foreground/15"
 					>
 						<ContentParticles />
 						<div className="relative z-1">

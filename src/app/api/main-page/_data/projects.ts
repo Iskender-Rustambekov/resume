@@ -11,14 +11,7 @@ const projectsByLocale: Record<MainPageLocale, Project[]> = {
 			description:
 				'Started a real-time multiplayer arcade game launcher from scratch as frontend team lead: architecture, API requirements, technical tasks, launcher/game-module flows and stable browser behavior.',
 			facts: ['Team lead', 'From zero', 'Realtime product'],
-			stack: [
-				'React',
-				'TypeScript',
-				'TanStack Query',
-				'Zustand',
-				'Centrifugo',
-				'Tailwind',
-			],
+			stack: ['React', 'TypeScript', 'TanStack Query', 'Zustand', 'Tailwind'],
 			accent: 'primary',
 		},
 		{
@@ -78,14 +71,7 @@ const projectsByLocale: Record<MainPageLocale, Project[]> = {
 			description:
 				'Запускал real-time multiplayer лаунчер для arcade-игр с нуля как frontend team lead: архитектура, требования к API, технические задачи, сценарии лаунчера и игровых модулей, стабильное поведение в браузере.',
 			facts: ['Team lead', 'С нуля', 'Real-time продукт'],
-			stack: [
-				'React',
-				'TypeScript',
-				'TanStack Query',
-				'Zustand',
-				'Centrifugo',
-				'Tailwind',
-			],
+			stack: ['React', 'TypeScript', 'TanStack Query', 'Zustand', 'Tailwind'],
 			accent: 'primary',
 		},
 		{
@@ -93,7 +79,11 @@ const projectsByLocale: Record<MainPageLocale, Project[]> = {
 			title: 'Business Web Systems',
 			description:
 				'Доводил маркетплейсы, сервисные сайты и админ-панели с нуля до продакшена, удерживая параллельные проекты поддерживаемыми, SEO-ориентированными и понятными в коммуникации с backend-командой.',
-			facts: ['2+ проекта параллельно', 'Доставка в продакшен', 'SEO-ориентированность'],
+			facts: [
+				'2+ проекта параллельно',
+				'Доставка в продакшен',
+				'SEO-ориентированность',
+			],
 			stack: [
 				'React',
 				'Next.js',
@@ -109,7 +99,11 @@ const projectsByLocale: Record<MainPageLocale, Project[]> = {
 			title: 'Exchange Commerce',
 			description:
 				'Строил frontend-сценарии для нестандартного маркетплейса, где пользователи могли платить деньгами или обменивать товары, с быстрым SSR, предсказуемым состоянием и дисциплинированной работой с запросами.',
-			facts: ['Бартерная логика', 'Оптимизированный SSR', 'Дисциплина состояния'],
+			facts: [
+				'Бартерная логика',
+				'Оптимизированный SSR',
+				'Дисциплина состояния',
+			],
 			stack: ['Next.js', 'TypeScript', 'React Query', 'Zustand', 'Tailwind'],
 			accent: 'accent',
 		},

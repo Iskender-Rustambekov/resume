@@ -17,7 +17,9 @@
 		"test:run": "vitest run",
 		"test:coverage": "vitest run --coverage",
 		"icons:gen": "tsx scripts/generateIcons.ts",
-		"api:gen": "orval --config orval.config.cjs"
+		"api:gen": "orval --config orval.config.cjs",
+		"resume:html": "node ./resume/generateResume.mjs",
+		"resume:pdf": "powershell -ExecutionPolicy Bypass -File ./resume/exportResumePdf.ps1"
 	},
 	"dependencies": {
 		"@gsap/react": "^2.1.2",

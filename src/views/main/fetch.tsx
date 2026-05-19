@@ -8,16 +8,11 @@ import {
 	serverGetMainPageProjects,
 	serverGetMainPageWorkExperience,
 } from '@/shared/api/generated/portfolio/server/main-page/main-page';
-import type { ServerApiOptions } from '@/shared/api/server/orvalInstance';
+import { publicStaticRequestOptions } from '@/shared/api/server/requestOptions';
 
 interface IMainPageFetchLayoutProps {
 	children: React.ReactNode;
 }
-
-const publicStaticRequestOptions = {
-	auth: 'none',
-	cache: 'force-cache',
-} satisfies ServerApiOptions;
 
 export const MainPageFetchLayout = async ({
 	children,

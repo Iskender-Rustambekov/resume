@@ -5,20 +5,6 @@ description: Work on the profile portfolio UI, responsive layout, visual polish,
 
 # Profile UI Motion
 
-## UI Map
-
-The main portfolio experience is composed in `src/views/main/ui/page.tsx`.
-
-Common locations:
-
-- Main sections: `src/views/main/ui/sections`
-- Main page motion helpers: `src/views/main/lib`
-- Main page CSS module: `src/views/main/ui/main-page.module.css`
-- Shared visual components: `src/shared/ui/components`
-- shadcn primitives: `src/shared/ui/shadcn/ui`
-- Header layout: `src/widgets/layout/header`
-- Theme and locale controls: `src/entities/theme`, `src/entities/locale`
-
 ## Design Approach
 
 - Build the usable portfolio experience directly; avoid marketing-only filler.

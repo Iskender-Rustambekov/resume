@@ -1,6 +1,6 @@
-export { ContactSection } from './contactSection';
-export { ExperienceSection } from './experienceSection';
+export { ContactSection } from './contact';
+export { ExperienceSection } from './experience';
 export { Footer } from './footer';
 export { ProjectsSection } from './projects';
-export { HeroSection } from './heroSection';
-export { StackSection } from './stackSection';
+export { HeroSection } from './hero';
+export { StackSection } from './stack';
