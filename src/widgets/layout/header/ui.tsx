@@ -1,5 +1,7 @@
 'use client';
 
+import { type MouseEvent } from 'react';
+
 import { SparkleIcon } from '@phosphor-icons/react';
 import { useTranslations } from 'next-intl';
 
@@ -11,10 +13,15 @@ export const Header = () => {
 	const navItems = [
 		{ label: t('nav.origin'), href: '#origin' },
 		{ label: t('nav.projects'), href: '#projects' },
-		{ label: t('nav.work'), href: '#craft' },
 		{ label: t('nav.experience'), href: '#experience' },
 		{ label: t('nav.contact'), href: '#contact' },
 	];
+
+	const handleOriginClick = (event: MouseEvent<HTMLAnchorElement>) => {
+		event.preventDefault();
+		window.history.replaceState(null, '', '#origin');
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
 
 	return (
 		<header className="fixed w-full z-40 top-4">
@@ -25,6 +32,7 @@ export const Header = () => {
 				>
 					<a
 						href="#origin"
+						onClick={handleOriginClick}
 						className="flex items-center gap-2 px-2 text-foreground"
 					>
 						<span className="grid size-7 place-items-center rounded-full bg-primary text-primary-foreground">
@@ -35,8 +43,11 @@ export const Header = () => {
 					<div className="hidden items-center gap-1 md:flex">
 						{navItems.map((item) => (
 							<a
-								key={item.label}
+								key={item.href}
 								href={item.href}
+								onClick={
+									item.href === '#origin' ? handleOriginClick : undefined
+								}
 								className="rounded-full px-4 py-2 text-muted-foreground transition hover:bg-muted hover:text-foreground"
 							>
 								{item.label}

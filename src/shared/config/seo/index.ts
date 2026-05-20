@@ -2,7 +2,6 @@ export {
 	DEFAULT_LOCALE,
 	LOCALES,
 	SITE_AUTHOR,
-	SITE_IMAGE_ALT,
 	SITE_KEYWORDS,
 	SITE_NAME,
 	buildMainPageJsonLd,

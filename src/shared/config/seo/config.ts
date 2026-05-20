@@ -6,8 +6,6 @@ export type AppLocale = (typeof routing.locales)[number];
 
 export const SITE_AUTHOR = 'Рустамбеков Искендер';
 export const SITE_NAME = 'Рустамбеков Искендер - Frontend Engineer';
-export const SITE_IMAGE_ALT =
-	'Рустамбеков Искендер frontend engineer portfolio preview';
 
 export const SITE_KEYWORDS = [
 	'Frontend Engineer',
@@ -95,7 +93,6 @@ export const getMetadataByLocale = (locale: AppLocale) => {
 export const buildRootMetadata = (locale: AppLocale): Metadata => {
 	const localizedMetadata = getMetadataByLocale(locale);
 	const pagePath = getPathForLocale(locale);
-	const imageUrl = '/media/images/main-page/hero4.png';
 
 	return {
 		metadataBase: getSiteUrl(),
@@ -121,25 +118,11 @@ export const buildRootMetadata = (locale: AppLocale): Metadata => {
 			description: localizedMetadata.description,
 			locale: localizedMetadata.locale,
 			alternateLocale: localizedMetadata.alternateLocale,
-			images: [
-				{
-					url: imageUrl,
-					width: 1200,
-					height: 630,
-					alt: SITE_IMAGE_ALT,
-				},
-			],
 		},
 		twitter: {
-			card: 'summary_large_image',
+			card: 'summary',
 			title: localizedMetadata.title,
 			description: localizedMetadata.description,
-			images: [
-				{
-					url: imageUrl,
-					alt: SITE_IMAGE_ALT,
-				},
-			],
 		},
 		robots: {
 			index: true,
@@ -148,7 +131,7 @@ export const buildRootMetadata = (locale: AppLocale): Metadata => {
 				index: true,
 				follow: true,
 				'max-video-preview': -1,
-				'max-image-preview': 'large',
+				'max-image-preview': 'none',
 				'max-snippet': -1,
 			},
 		},
@@ -159,10 +142,6 @@ export const buildRootMetadata = (locale: AppLocale): Metadata => {
 export const buildMainPageJsonLd = (locale: AppLocale) => {
 	const metadata = getMetadataByLocale(locale);
 	const pageUrl = getAbsoluteUrl(locale);
-	const imageUrl = new URL(
-		'/media/images/main-page/hero4.png',
-		pageUrl,
-	).toString();
 
 	return {
 		'@context': 'https://schema.org',
@@ -180,7 +159,6 @@ export const buildMainPageJsonLd = (locale: AppLocale) => {
 				name: SITE_AUTHOR,
 				jobTitle: 'Frontend Engineer',
 				url: pageUrl,
-				image: imageUrl,
 				description: metadata.description,
 				knowsAbout: [
 					'React',

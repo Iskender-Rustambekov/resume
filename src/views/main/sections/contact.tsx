@@ -19,59 +19,59 @@ export const ContactSection = async () => {
 	]);
 
 	return (
-		<section id="contact" className="relative py-24">
+		<section id="contact" className="relative py-16 sm:py-24">
 			<div className="container">
 				<div
 					data-motion="reveal"
-					className="relative overflow-hidden rounded-[2rem] border border-border bg-card/75 p-8 shadow-2xl sm:p-12 lg:p-16"
+					className="relative overflow-hidden rounded-3xl border border-border bg-card/75 p-5 shadow-2xl sm:p-10 lg:rounded-[2rem] lg:p-16"
 				>
 					<div className={`${styles.speedLines} absolute inset-0 opacity-20`} />
-					<div className="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
-						<div>
+					<div className="relative grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+						<div className="min-w-0">
 							<p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
 								{t('kicker')}
 							</p>
-							<h2 className="max-w-4xl text-[clamp(3rem,8vw,8rem)] font-semibold leading-[0.9] tracking-normal">
+							<h2 className="max-w-4xl text-4xl font-semibold leading-tight tracking-normal sm:text-6xl sm:leading-none lg:text-8xl">
 								{t('title')}
 							</h2>
 						</div>
-						<div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col">
+						<div className="grid gap-3 sm:grid-cols-2 lg:flex lg:flex-col">
 							<a
 								href={links.email}
-								className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground transition hover:bg-secondary hover:text-secondary-foreground"
+								className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-3 text-sm font-medium text-primary-foreground transition hover:bg-secondary hover:text-secondary-foreground sm:text-base"
 							>
-								<EnvelopeSimpleIcon className="size-5" weight="bold" />
+								<EnvelopeSimpleIcon className="size-5 shrink-0" weight="bold" />
 								{t('email')}
 							</a>
 							<a
 								href={links.github}
 								target="_blank"
-								className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
+								className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-4 py-3 text-sm font-medium transition hover:bg-muted sm:text-base"
 							>
-								<GithubLogoIcon className="size-5" weight="bold" />
+								<GithubLogoIcon className="size-5 shrink-0" weight="bold" />
 								{t('github')}
 							</a>
 							<a
 								href={links.linkedin}
 								target="_blank"
-								className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
+								className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-4 py-3 text-sm font-medium transition hover:bg-muted sm:text-base"
 							>
-								<LinkedinLogoIcon className="size-5" weight="bold" />
+								<LinkedinLogoIcon className="size-5 shrink-0" weight="bold" />
 								{t('linkedin')}
 							</a>
 							<a
 								href={links.telegram}
 								target="_blank"
-								className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
+								className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-4 py-3 text-sm font-medium transition hover:bg-muted sm:text-base"
 							>
-								<TelegramLogoIcon className="size-5" weight="bold" />
+								<TelegramLogoIcon className="size-5 shrink-0" weight="bold" />
 								{t('telegram')}
 							</a>
 							<a
 								href={links.resume}
-								className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-6 py-3 font-medium transition hover:bg-muted"
+								className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-border bg-card/60 px-4 py-3 text-sm font-medium transition hover:bg-muted sm:col-span-2 sm:text-base lg:col-span-1"
 							>
-								<FileTextIcon className="size-5" weight="bold" />
+								<FileTextIcon className="size-5 shrink-0" weight="bold" />
 								{t('cv')}
 							</a>
 						</div>
