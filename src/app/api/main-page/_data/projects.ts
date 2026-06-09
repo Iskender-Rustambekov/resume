@@ -6,11 +6,11 @@ import { localizedResponse } from '../_lib/localizedResponse';
 const projectsByLocale: Record<MainPageLocale, Project[]> = {
 	en: [
 		{
-			kicker: 'Confidential game product',
-			title: 'Arcade Launcher',
+			kicker: 'Nomad Games',
+			title: 'Casual Multiplayer Games Platform',
 			description:
-				'Started a real-time multiplayer arcade game launcher from scratch as frontend team lead: architecture, API requirements, technical tasks, launcher/game-module flows and stable browser behavior.',
-			facts: ['Team lead', 'From zero', 'Realtime product'],
+				'Owned frontend architecture, API integration and product-facing game flows for a free-to-play web platform for casual multiplayer board and card games inspired by traditional games from different countries.',
+			facts: ['Frontend ownership', 'From zero', 'Multiplayer web games'],
 			stack: ['React', 'TypeScript', 'TanStack Query', 'Zustand', 'Tailwind'],
 			accent: 'primary',
 		},
@@ -66,11 +66,11 @@ const projectsByLocale: Record<MainPageLocale, Project[]> = {
 	],
 	ru: [
 		{
-			kicker: 'Конфиденциальный игровой продукт',
-			title: 'Arcade Launcher',
+			kicker: 'Nomad Games',
+			title: 'Casual Multiplayer Games Platform',
 			description:
-				'Запускал real-time multiplayer лаунчер для arcade-игр с нуля как frontend team lead: архитектура, требования к API, технические задачи, сценарии лаунчера и игровых модулей, стабильное поведение в браузере.',
-			facts: ['Team lead', 'С нуля', 'Real-time продукт'],
+				'Отвечал за frontend-архитектуру, интеграцию API и продуктовые игровые сценарии free-to-play веб-платформы для casual multiplayer настольных и карточных игр, вдохновленных традиционными играми разных стран.',
+			facts: ['Ответственность за frontend', 'С нуля', 'Multiplayer web games'],
 			stack: ['React', 'TypeScript', 'TanStack Query', 'Zustand', 'Tailwind'],
 			accent: 'primary',
 		},

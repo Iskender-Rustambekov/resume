@@ -30,12 +30,12 @@ vi.mock('next-intl', () => ({
 					return `Loading ${values?.current}/${values?.total}`;
 				case 'readyCommand':
 					return 'ready';
-				case 'redacted':
-					return 'Redacted';
 				case 'run':
 					return 'run';
 				case 'stack':
 					return 'Stack';
+				case 'status':
+					return 'Project details loaded';
 				case 'toolsLoaded':
 					return `Tools loaded ${values?.count}`;
 				default:
@@ -81,10 +81,12 @@ describe('ProjectTerminal', () => {
 		render(<ProjectTerminal />);
 
 		expect(screen.getByText('Available commands')).toBeInTheDocument();
-		expect(screen.getByRole('button', { name: /runcase:first-project/i }))
-			.toBeInTheDocument();
-		expect(screen.getByRole('button', { name: /runcase:second-project/i }))
-			.toBeInTheDocument();
+		expect(
+			screen.getByRole('button', { name: /runcase:first-project/i }),
+		).toBeInTheDocument();
+		expect(
+			screen.getByRole('button', { name: /runcase:second-project/i }),
+		).toBeInTheDocument();
 
 		expect(
 			screen.getByRole('heading', { name: 'First Project' }),
@@ -105,7 +107,7 @@ describe('ProjectTerminal', () => {
 		expect(screen.getByText('MODE')).toBeInTheDocument();
 		expect(screen.getByText('STACK')).toBeInTheDocument();
 		expect(screen.getByText('Tools loaded 2')).toBeInTheDocument();
-		expect(screen.getByText('Redacted')).toBeInTheDocument();
+		expect(screen.getByText('Project details loaded')).toBeInTheDocument();
 		expect(screen.getByText('ready')).toBeInTheDocument();
 	});
 
@@ -131,6 +133,8 @@ describe('ProjectTerminal', () => {
 		expect(
 			screen.queryByRole('heading', { name: 'First Project' }),
 		).not.toBeInTheDocument();
-		expect(screen.queryByText('First project description')).not.toBeInTheDocument();
+		expect(
+			screen.queryByText('First project description'),
+		).not.toBeInTheDocument();
 	});
 });

@@ -7,15 +7,15 @@ const workExperienceByLocale: Record<MainPageLocale, ExperienceItem[]> = {
 	en: [
 		{
 			role: 'Frontend Web Developer',
-			company: 'Confidential company',
-			employmentType: 'Confidential',
+			company: 'Nomad Games',
+			employmentType: 'Startup',
 			period: 'Sep 2024 - Jan 2026',
 			duration: '1 year 5 months',
-			location: 'Confidential',
-			mode: 'Product work',
-			stack: ['React.js', 'TypeScript', 'Game launcher', 'Arcade games'],
+			location: 'Bishkek, Kyrgyzstan',
+			mode: 'Product startup',
+			stack: ['React.js', 'TypeScript', 'Web games', 'Multiplayer games'],
 			description:
-				'Frontend team lead for a real-time game launcher built from scratch.',
+				'Owned frontend delivery for a local indie startup based in Bishkek, building a free-to-play web platform for casual multiplayer board and card games inspired by traditional games from different countries.',
 		},
 		{
 			role: 'Frontend Web Developer',
@@ -69,15 +69,15 @@ const workExperienceByLocale: Record<MainPageLocale, ExperienceItem[]> = {
 	ru: [
 		{
 			role: 'Frontend Web Developer',
-			company: 'Конфиденциальная компания',
-			employmentType: 'Конфиденциально',
+			company: 'Nomad Games',
+			employmentType: 'Стартап',
 			period: 'Сен 2024 - Янв 2026',
 			duration: '1 год 5 месяцев',
-			location: 'Конфиденциально',
-			mode: 'Продуктовая работа',
-			stack: ['React.js', 'TypeScript', 'Game launcher', 'Arcade games'],
+			location: 'Bishkek, Kyrgyzstan',
+			mode: 'Продуктовый стартап',
+			stack: ['React.js', 'TypeScript', 'Web games', 'Multiplayer games'],
 			description:
-				'Frontend team lead для real-time игрового лаунчера, построенного с нуля.',
+				'Отвечал за frontend-направление в локальном indie-стартапе из Бишкека, который строил free-to-play веб-платформу для casual multiplayer настольных и карточных игр, вдохновленных традиционными играми разных стран.',
 		},
 		{
 			role: 'Frontend Web Developer',

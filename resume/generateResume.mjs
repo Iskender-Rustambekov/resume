@@ -51,7 +51,7 @@ const resumes = {
 		metrics: [
 			['4+', 'years commercial frontend'],
 			['8', 'production environments'],
-			['Lead', 'real-time launcher frontend'],
+			['E2E', 'frontend ownership'],
 		],
 		strengths: [
 			'Frontend architecture, feature boundaries and shared layers.',
@@ -63,11 +63,11 @@ const resumes = {
 		experience: [
 			{
 				role: 'Frontend Web Developer',
-				company: 'Confidential company',
+				company: 'Nomad Games',
 				description:
-					'Frontend team lead for a real-time game launcher built from scratch. Owned architecture, API requirements, technical tasks, launcher/game-module flows and stable browser behavior.',
-				stack: 'React.js, TypeScript, Game launcher, Arcade games',
-				meta: ['Sep 2024 - Jan 2026', '1 year 5 months', 'Product work'],
+					'Owned frontend delivery at a Bishkek indie startup building a free-to-play web platform for casual multiplayer board and card games inspired by traditional games from different countries. Covered architecture, API requirements, technical tasks, game flows and stable browser behavior.',
+				stack: 'React.js, TypeScript, Web games, Multiplayer games',
+				meta: ['Sep 2024 - Jan 2026', '1 year 5 months', 'Bishkek, startup'],
 			},
 			{
 				role: 'Frontend Web Developer',
@@ -104,35 +104,35 @@ const resumes = {
 		],
 		projects: [
 			{
-				title: 'Arcade Launcher',
-				kicker: 'Confidential game product',
+				title: 'Casual Multiplayer Games Platform',
+				kicker: 'Nomad Games',
 				description:
-					'Real-time multiplayer arcade game launcher started from zero as frontend team lead.',
+					'Frontend ownership for a free-to-play web platform for casual multiplayer board and card games inspired by traditional games from different countries.',
 				stack: 'React, TypeScript, TanStack Query, Zustand, Tailwind',
 			},
 			{
 				title: 'Business Web Systems',
-				kicker: 'Outsource delivery',
+				kicker: 'DATAxWAY',
 				description:
 					'Marketplaces, service websites and admin panels delivered to production with SEO and backend clarity.',
 				stack: 'React, Next.js, TypeScript, React Query, Zustand, Tailwind',
 			},
 			{
 				title: 'Exchange Commerce',
-				kicker: 'Barter marketplace',
+				kicker: 'GetByVerto',
 				description:
 					'Marketplace flows where users could pay with money or exchange goods, backed by SSR and state discipline.',
 				stack: 'Next.js, TypeScript, React Query, Zustand, Tailwind',
 			},
 			{
 				title: 'Admin Commerce',
-				kicker: 'Marketplace and admin',
+				kicker: 'Welive Turkish Company',
 				description:
 					'Marketplace with roles and administration: legacy cleanup, performance fixes and clearer feature boundaries.',
 				stack: 'Next.js, TypeScript, Redux Toolkit, SCSS',
 			},
 		],
-		note: 'Resume generated from portfolio content. Confidential product details are intentionally redacted.',
+		note: 'Resume generated from portfolio content.',
 	},
 	ru: {
 		fileName: 'iskender-rustambekov-resume-ru.html',
@@ -154,7 +154,7 @@ const resumes = {
 		metrics: [
 			['4+', 'года коммерческого frontend-опыта'],
 			['8', 'рабочих продуктовых сред'],
-			['Lead', 'frontend real-time лаунчера'],
+			['Фокус', 'ответственность за frontend'],
 		],
 		strengths: [
 			'Frontend-архитектура, границы фич и shared-слои.',
@@ -166,11 +166,11 @@ const resumes = {
 		experience: [
 			{
 				role: 'Frontend Web Developer',
-				company: 'Confidential company',
+				company: 'Nomad Games',
 				description:
-					'Frontend team lead real-time игрового лаунчера, построенного с нуля. Отвечал за архитектуру, требования к API, технические задачи, сценарии лаунчера/игровых модулей и стабильное поведение в браузере.',
-				stack: 'React.js, TypeScript, Game launcher, Arcade games',
-				meta: ['Сен 2024 - Янв 2026', '1 год 5 месяцев', 'Продуктовая работа'],
+					'Отвечал за frontend-направление в локальном indie-стартапе из Бишкека, который строил free-to-play веб-платформу для casual multiplayer настольных и карточных игр, вдохновленных традиционными играми разных стран. Покрывал архитектуру, требования к API, технические задачи, игровые сценарии и стабильное поведение в браузере.',
+				stack: 'React.js, TypeScript, Web games, Multiplayer games',
+				meta: ['Сен 2024 - Янв 2026', '1 год 5 месяцев', 'Bishkek, startup'],
 			},
 			{
 				role: 'Frontend Web Developer',
@@ -207,35 +207,35 @@ const resumes = {
 		],
 		projects: [
 			{
-				title: 'Arcade Launcher',
-				kicker: 'Конфиденциальный игровой продукт',
+				title: 'Casual Multiplayer Games Platform',
+				kicker: 'Nomad Games',
 				description:
-					'Real-time multiplayer лаунчер для arcade-игр, запущенный с нуля в роли frontend team lead.',
+					'Ответственность за frontend free-to-play веб-платформы casual multiplayer настольных и карточных игр, вдохновленных традиционными играми разных стран.',
 				stack: 'React, TypeScript, TanStack Query, Zustand, Tailwind',
 			},
 			{
 				title: 'Business Web Systems',
-				kicker: 'Outsource delivery',
+				kicker: 'DATAxWAY',
 				description:
 					'Маркетплейсы, сервисные сайты и админ-панели, доведенные до продакшена с учетом SEO и понятной коммуникации с backend.',
 				stack: 'React, Next.js, TypeScript, React Query, Zustand, Tailwind',
 			},
 			{
 				title: 'Exchange Commerce',
-				kicker: 'Бартерный маркетплейс',
+				kicker: 'GetByVerto',
 				description:
 					'Сценарии маркетплейса, где пользователи могли платить деньгами или обменивать товары, с SSR и дисциплиной состояния.',
 				stack: 'Next.js, TypeScript, React Query, Zustand, Tailwind',
 			},
 			{
 				title: 'Admin Commerce',
-				kicker: 'Маркетплейс и админка',
+				kicker: 'Welive Turkish Company',
 				description:
 					'Маркетплейс с ролями и администрированием: чистка legacy, performance fixes и более ясные границы фич.',
 				stack: 'Next.js, TypeScript, Redux Toolkit, SCSS',
 			},
 		],
-		note: 'Резюме собрано на основе данных портфолио. Конфиденциальные детали продуктов намеренно скрыты.',
+		note: 'Резюме собрано на основе данных портфолио.',
 	},
 };
 

@@ -41,7 +41,7 @@ export const ProjectTerminal = () => {
 				toolsLoaded: t('toolsLoaded', {
 					count: activeProject?.stack.length ?? 0,
 				}),
-				redacted: t('redacted'),
+				status: t('status'),
 			}),
 		[activeProject, activeProjectIndex, projects.length, t],
 	);
@@ -121,7 +121,7 @@ const getTerminalLines = (
 	labels: {
 		loading: string;
 		toolsLoaded: string;
-		redacted: string;
+		status: string;
 	},
 ): TTerminalLine[] => [
 	{
@@ -137,7 +137,7 @@ const getTerminalLines = (
 	},
 	{
 		kind: 'muted',
-		text: labels.redacted,
+		text: labels.status,
 	},
 ];
 

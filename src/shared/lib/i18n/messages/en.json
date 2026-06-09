@@ -34,7 +34,7 @@
 			"kicker": "Experience",
 			"title": "Where that work happened.",
 			"range": "2021 - 2026",
-			"summary": "Remote, office, contract and confidential product work.",
+			"summary": "Remote, office, contract and product startup work.",
 			"description": "This section is the map: dates, roles and environments. The deeper project details live above, where they are easier to compare.",
 			"languages": "Languages",
 			"languagesDescription": "Comfortable across local teams and English-speaking product contexts.",
@@ -68,7 +68,7 @@
 		"stack": "STACK",
 		"loading": "Loading public case {current} of {total}...",
 		"toolsLoaded": "{count} tools loaded",
-		"redacted": "Confidential details redacted. Public signal ready.",
+		"status": "Public project details loaded. Ready for review.",
 		"readyCommand": "ready for next command"
 	},
 	"login": {
