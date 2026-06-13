@@ -66,9 +66,10 @@ export const HeroSection = async () => {
 							<Image
 								src="/media/images/main-page/hero4.png"
 								alt={t('imageAlt')}
-								className="min-h-150 max-h-200 h-full object-contain"
-								width={500}
-								height={800}
+								width={496}
+								height={1193}
+								className="h-full min-h-150 max-h-200 object-contain"
+								style={{ width: 'auto' }}
 								priority
 							/>
 						</div>
