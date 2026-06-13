@@ -9,7 +9,12 @@ import styles from './styles.module.css';
 
 // ===============================================
 export const TerminalHeader = () => (
-	<div className="relative z-1 grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-primary/25 bg-card/30 px-4 py-[0.85rem]">
+	<div
+		className={cn(
+			styles.terminalHeader,
+			'relative z-1 grid grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-primary/25 px-4 py-[0.85rem]',
+		)}
+	>
 		<div className="grid h-6 w-8 place-items-center rounded-[0.18rem] bg-primary text-[0.7rem] text-primary-foreground shadow-md shadow-primary/30">
 			<span>C:\</span>
 		</div>
@@ -76,8 +81,12 @@ export const ProjectCommand = ({
 		type="button"
 		onClick={onSelect}
 		className={cn(
-			'grid grid-cols-[auto_1fr] items-center gap-[0.65rem] rounded-[0.8rem] border border-primary/25 bg-card/40 px-[0.9rem] py-[0.82rem] text-left text-[0.86rem] text-white transition-[border-color,background,color,transform,box-shadow] duration-200 ease-out hover:translate-x-1 hover:border-primary hover:bg-card/60 hover:shadow-inner',
-			isActive && 'translate-x-1 border-primary bg-card/60 shadow-inner',
+			styles.terminalCard,
+			'grid grid-cols-[auto_1fr] items-center gap-[0.65rem] rounded-[0.8rem] border border-primary/25 px-[0.9rem] py-[0.82rem] text-left text-[0.86rem] text-white transition-[border-color,background,color,transform,box-shadow] duration-200 ease-out hover:translate-x-1 hover:border-primary hover:shadow-inner',
+			isActive && [
+				styles.terminalCardActive,
+				'translate-x-1 border-primary shadow-inner',
+			],
 		)}
 	>
 		<span className="text-primary">{runLabel}</span>
@@ -101,7 +110,8 @@ export const ProjectSummary = ({
 		className={cn(
 			styles.terminalReveal,
 			styles.terminalCaseHeader,
-			'grid gap-4 rounded-2xl border border-primary/25 bg-card/30 p-[1.15rem] shadow-inner lg:grid-cols-[1fr_auto]',
+			styles.terminalPanel,
+			'grid gap-4 rounded-2xl border border-primary/25 p-[1.15rem] shadow-inner lg:grid-cols-[1fr_auto]',
 		)}
 		style={{ '--terminal-delay': '360ms' } as CSSProperties}
 	>
@@ -144,7 +154,12 @@ export const ProjectDetails = ({
 		)}
 		style={{ '--terminal-delay': '520ms' } as CSSProperties}
 	>
-		<div className="rounded-2xl border border-primary/25 bg-secondary-foreground p-[0.95rem]">
+		<div
+			className={cn(
+				styles.terminalPanel,
+				'rounded-2xl border border-primary/25 p-[0.95rem]',
+			)}
+		>
 			<p className="text-[0.78rem] opacity-80">{factsLabel}</p>
 
 			<div className="mt-3 grid gap-2">
@@ -153,7 +168,8 @@ export const ProjectDetails = ({
 						key={fact}
 						className={cn(
 							styles.terminalFact,
-							'grid grid-cols-[auto_1fr] items-center gap-3 rounded-xl border border-primary/25 bg-card/40 px-[0.7rem] py-[0.62rem]',
+							styles.terminalCard,
+							'grid grid-cols-[auto_1fr] items-center gap-3 rounded-xl border border-primary/25 px-[0.7rem] py-[0.62rem]',
 						)}
 					>
 						<span>#{String(index + 1).padStart(2, '0')}</span>
@@ -163,7 +179,12 @@ export const ProjectDetails = ({
 			</div>
 		</div>
 
-		<div className="rounded-2xl border border-primary/25 bg-secondary-foreground p-[0.95rem]">
+		<div
+			className={cn(
+				styles.terminalPanel,
+				'rounded-2xl border border-primary/25 p-[0.95rem]',
+			)}
+		>
 			<p className="text-[0.78rem] opacity-80">{stackLabel}</p>
 
 			<div

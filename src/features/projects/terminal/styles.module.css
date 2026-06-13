@@ -1,7 +1,35 @@
 @reference '../../../shared/styles/index.css';
 
+.terminalShell {
+	background: oklch(0.075 0.008 82);
+	color: oklch(0.95 0.012 82);
+}
+
 .terminalShell::before {
 	@apply pointer-events-none absolute inset-0 content-[''];
+}
+
+.terminalHeader {
+	background: color-mix(in oklch, oklch(0.16 0.012 82) 72%, transparent);
+}
+
+.terminalSurface {
+	background: oklch(0.095 0.01 82);
+	color: oklch(0.95 0.012 82);
+}
+
+.terminalPanel {
+	background: oklch(0.13 0.012 82);
+	color: oklch(0.95 0.012 82);
+}
+
+.terminalCard {
+	background: color-mix(in oklch, oklch(0.2 0.012 82) 68%, transparent);
+}
+
+.terminalCard:hover,
+.terminalCardActive {
+	background: color-mix(in oklch, oklch(0.24 0.016 82) 76%, transparent);
 }
 
 .terminalWindowControls span {
@@ -21,7 +49,8 @@
 }
 
 .terminalCaseMeta span {
-	@apply rounded-full border border-primary/25 bg-card/40 px-3 py-1.5 text-[0.78rem] text-white;
+	@apply rounded-full border border-primary/25 px-3 py-1.5 text-[0.78rem] text-white;
+	background: color-mix(in oklch, oklch(0.2 0.012 82) 68%, transparent);
 }
 
 .terminalFact span {
@@ -33,7 +62,8 @@
 }
 
 .terminalStackList span {
-	@apply rounded-full border border-border bg-card/40 px-[0.68rem] py-[0.38rem] text-[0.82rem] text-secondary;
+	@apply rounded-full border border-border px-[0.68rem] py-[0.38rem] text-[0.82rem] text-primary;
+	background: color-mix(in oklch, oklch(0.2 0.012 82) 68%, transparent);
 }
 
 .terminalReveal {

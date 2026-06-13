@@ -2,67 +2,51 @@
 	position: relative;
 	isolation: isolate;
 	overflow-x: clip;
-	background:
-		radial-gradient(
-			circle at 18% 10%,
-			color-mix(in oklch, var(--primary) 22%, transparent),
-			transparent 30rem
-		),
-		radial-gradient(
-			circle at 88% 24%,
-			color-mix(in oklch, var(--accent) 18%, transparent),
-			transparent 34rem
-		),
-		radial-gradient(
-			circle at 52% 74%,
-			color-mix(in oklch, var(--secondary) 12%, transparent),
-			transparent 32rem
-		),
-		linear-gradient(
-			180deg,
-			color-mix(in oklch, var(--background) 96%, var(--primary) 4%) 0%,
-			color-mix(in oklch, var(--background) 92%, var(--card) 8%) 48%,
-			var(--background) 100%
-		);
+	background: var(--background);
 	color: var(--foreground);
 }
 
-.root::before {
+.pathBackdrop {
 	position: fixed;
 	inset: 0;
-	z-index: -2;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
 	pointer-events: none;
-	content: '';
-	background:
-		linear-gradient(
-			color-mix(in oklch, var(--foreground) 4%, transparent) 1px,
-			transparent 1px
-		),
-		linear-gradient(
-			90deg,
-			color-mix(in oklch, var(--foreground) 3%, transparent) 1px,
-			transparent 1px
-		);
-	background-size: 72px 72px;
-	mask-image: radial-gradient(
-		circle at 50% 16%,
-		var(--foreground),
-		transparent 72%
-	);
+	overflow: visible;
 }
 
-.root::after {
-	position: fixed;
-	inset: auto 0 0;
-	z-index: -1;
-	height: 38vh;
-	pointer-events: none;
-	content: '';
-	background: linear-gradient(
-		0deg,
-		color-mix(in oklch, var(--background) 82%, transparent),
-		transparent
-	);
+.pathBackdrop path {
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	vector-effect: non-scaling-stroke;
+	animation: drawPath 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.pathPrimary {
+	stroke: color-mix(in oklch, var(--primary) 64%, transparent);
+	stroke-width: 1.4;
+}
+
+.pathSecondary {
+	stroke: color-mix(in oklch, var(--secondary) 44%, transparent);
+	stroke-width: 1.1;
+	animation-delay: 0.14s;
+}
+
+.pathMuted {
+	stroke: color-mix(in oklch, var(--foreground) 12%, transparent);
+	stroke-width: 0.9;
+	animation-delay: 0.28s;
+}
+
+@keyframes drawPath {
+	to {
+		stroke-dashoffset: 0;
+	}
 }
 
 .speedLines {
@@ -86,6 +70,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+	.pathBackdrop path {
+		animation: none;
+		stroke-dashoffset: 0;
+	}
+
 	.contentParticles {
 		display: none;
 	}

@@ -55,13 +55,18 @@ export const ProjectTerminal = () => {
 			data-motion="reveal"
 			className={cn(
 				styles.terminalShell,
-				'relative overflow-hidden rounded-[1.25rem] border border-primary bg-secondary-foreground font-mono text-white shadow-2xl shadow-black/40 ring-1 ring-primary/30',
+				'relative overflow-hidden rounded-[1.25rem] border border-primary font-mono text-white shadow-2xl shadow-black/40 ring-1 ring-primary/30',
 			)}
 		>
 			<TerminalHeader />
 			<div className="relative z-1 grid min-h-172 lg:grid-cols-[20rem_1fr]">
 				{/* ============== Sidebar ============== */}
-				<aside className="grid content-start border-b border-primary/25 bg-secondary-foreground p-4 lg:border-r lg:border-b-0">
+				<aside
+					className={cn(
+						styles.terminalSurface,
+						'grid content-start border-b border-primary/25 p-4 lg:border-r lg:border-b-0',
+					)}
+				>
 					<p className="text-[0.78rem] opacity-80">{t('availableCommands')}</p>
 
 					<div className="mt-4 grid gap-2">
@@ -78,7 +83,12 @@ export const ProjectTerminal = () => {
 				</aside>
 
 				{/* ============== Content ============== */}
-				<div className="relative overflow-hidden bg-secondary-foreground p-5 text-white">
+				<div
+					className={cn(
+						styles.terminalSurface,
+						'relative overflow-hidden p-5 text-white',
+					)}
+				>
 					<div
 						key={activeProject.title}
 						className="relative z-2 grid min-h-152 content-start gap-[1.1rem]"
