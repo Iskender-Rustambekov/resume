@@ -19,23 +19,33 @@ const sharedSkills = [
 	'TypeScript',
 	'JavaScript',
 	'TanStack Query',
-	'React Query',
 	'Zustand',
+	'Redux',
 	'Redux Toolkit',
+	'Feature-Sliced Design',
+	'REST API',
+	'WebSockets',
+	'OpenAPI',
+	'Orval',
 	'Tailwind CSS',
+	'Material UI',
+	'Ant Design',
+	'Chakra UI',
 	'SCSS',
 	'Styled Components',
-	'GSAP',
+	'Framer Motion',
+	'Jest',
 	'Vitest',
-	'FSD',
+	'ESLint',
+	'i18n',
 ];
 
 const resumes = {
 	en: {
 		fileName: 'iskender-rustambekov-resume-en.html',
-		title: 'Iskender Rustambekov - Frontend Engineer Resume',
+		title: 'Iskender Rustambekov - Frontend Developer Resume',
 		name: 'Iskender Rustambekov',
-		role: 'Frontend Engineer / React TypeScript Engineer',
+		role: 'Frontend Developer / React / Next.js / TypeScript',
 		location: 'Bishkek / Remote',
 		sections: {
 			profile: 'Profile',
@@ -47,98 +57,117 @@ const resumes = {
 			projects: 'Selected Projects',
 		},
 		summary:
-			'Frontend engineer with 4+ years of commercial experience building web products with React, Next.js and TypeScript. Focused on product logic, API-heavy flows, real-time UI, predictable state and frontend architecture for scalable applications.',
+			'Frontend developer with 4+ years of commercial experience across product web applications, e-commerce, marketplace platforms, admin panels, internal banking systems and real-time products. Strong in React, Next.js, TypeScript, frontend architecture, API integrations and complex interfaces.',
 		metrics: [
 			['4+', 'years commercial frontend'],
-			['8', 'production environments'],
-			['E2E', 'frontend ownership'],
+			['5', 'companies'],
+			['Remote', 'ready'],
 		],
 		strengths: [
-			'Frontend architecture, feature boundaries and shared layers.',
-			'Typed API contracts, DTO mapping and async loading/error states.',
-			'Complex product rules: roles, permissions, forms, cache and state transitions.',
-			'Technical requirements, backend/design alignment and delivery ownership.',
+			'React, Next.js and TypeScript in production product interfaces.',
+			'Frontend architecture and decomposition of complex interfaces.',
+			'TanStack Query, Zustand and Redux Toolkit for predictable state.',
+			'REST API, WebSockets, OpenAPI and Orval integrations.',
+			'Complex forms, tables, dashboards and admin panels.',
 		],
-		languages: ['English: B1', 'Russian: native', 'Kyrgyz: native'],
+		languages: ['English: B1', 'Russian: native'],
 		experience: [
 			{
-				role: 'Frontend Web Developer',
-				company: 'Nomad Games',
+				role: 'Frontend Developer',
+				company: 'NomadGames',
 				description:
-					'Owned frontend delivery at a Bishkek indie startup building a free-to-play web platform for casual multiplayer board and card games inspired by traditional games from different countries. Covered architecture, API requirements, technical tasks, game flows and stable browser behavior.',
-				stack: 'React.js, TypeScript, Web games, Multiplayer games',
-				meta: ['Sep 2024 - Jan 2026', '1 year 5 months', 'Bishkek, startup'],
+					'Built the frontend of a free browser multiplayer games platform from scratch: application architecture, UI, state management, API integrations and real-time behavior. Designed reusable managers for sound, vibration, asset loading and screen state, and aligned API contracts with the backend team before new features were implemented.',
+				stack:
+					'React, TypeScript, Feature-Sliced Design, Zustand, TanStack Query, Centrifugo, WebSockets, REST API, Tailwind CSS',
+				meta: [
+					'Sep 2024 - Apr 2026',
+					'1 year 8 months',
+					'Bishkek, product platform',
+				],
 			},
 			{
-				role: 'Frontend Web Developer',
+				role: 'Frontend Developer',
 				company: 'DATAxWAY',
 				description:
-					'Built product interfaces, marketplaces, admin panels and SEO-oriented websites from scratch to production while keeping parallel projects maintainable.',
-				stack: 'React.js, TypeScript, Frontend architecture',
+					'Delivered e-commerce products, marketplace platforms, SEO-oriented sites and business admin panels. Implemented SSR, SSG and ISR pages, optimized image and font loading for stronger FCP/LCP, and decomposed monolithic UI modules into reusable UI-kit components.',
+				stack:
+					'Next.js, React, TypeScript, Feature-Sliced Design, TanStack Query, Zustand, Tailwind CSS, REST API',
 				meta: ['Aug 2023 - Jun 2024', '11 months', 'Bishkek, office'],
 			},
 			{
-				role: 'Frontend Web Developer',
+				role: 'Frontend Developer',
 				company: 'GetByVerto',
 				description:
-					'Delivered Next.js product frontend remotely with typed backend contracts, predictable state and disciplined request handling.',
-				stack: 'Next.js, TypeScript',
+					'Developed the frontend for a marketplace with auctions, chats and barter-based deals. Built a typed API layer with Orval, configured TanStack Query caching and invalidation, and extracted repeated marketplace logic into reusable components and modules.',
+				stack:
+					'Next.js, React, TypeScript, Orval, TanStack Query, Zustand, Tailwind CSS, REST API',
 				meta: ['Aug 2022 - Aug 2023', '1 year 1 month', 'Remote'],
 			},
 			{
-				role: 'Frontend Web Developer',
+				role: 'Frontend Developer',
 				company: 'Welive Turkish Company',
 				description:
-					'Implemented frontend features for web products in a fast-moving product environment.',
-				stack: 'Next.js, TypeScript',
+					'Worked on an e-commerce platform for home goods and room fragrance products. Implemented catalog pages, product cards, forms, tables and admin sections, including role-based interfaces for different access levels.',
+				stack:
+					'Next.js, React, TypeScript, Redux Toolkit, Material UI, SCSS, REST API',
 				meta: ['Jan 2022 - Jul 2022', '7 months', 'Bishkek, office'],
 			},
 			{
 				role: 'Frontend Developer',
 				company: 'Budgeting OAPiSR',
 				description:
-					'Built an internal bank budgeting system with formula logic, tables, branch rules, drag-and-drop and frontend-side auto calculations.',
-				stack: 'Budget systems, Bank branch logic',
+					'Built interfaces for an internal banking budgeting system with tables, formulas, calculated data and branch structure. Implemented complex table scenarios, optimized large tables and tree structures, and handled validation errors, slow requests and non-standard UI states.',
+				stack: 'React, Next.js, Ant Design, Styled Components, REST API',
 				meta: ['Oct 2021 - Jan 2022', '4 months', 'Contract, remote'],
 			},
 		],
 		projects: [
 			{
-				title: 'Casual Multiplayer Games Platform',
-				kicker: 'Nomad Games',
+				title: 'Browser Multiplayer Games Platform',
+				kicker: 'NomadGames',
 				description:
-					'Frontend ownership for a free-to-play web platform for casual multiplayer board and card games inspired by traditional games from different countries.',
-				stack: 'React, TypeScript, TanStack Query, Zustand, Tailwind',
+					'Frontend for a free web platform for browser multiplayer games, built from zero around product architecture, UI, state, API contracts and real-time interaction through Centrifugo and WebSockets.',
+				stack:
+					'React, TypeScript, FSD, Zustand, TanStack Query, Centrifugo, Tailwind',
 			},
 			{
-				title: 'Business Web Systems',
+				title: 'E-commerce, Marketplaces and Admin Panels',
 				kicker: 'DATAxWAY',
 				description:
-					'Marketplaces, service websites and admin panels delivered to production with SEO and backend clarity.',
-				stack: 'React, Next.js, TypeScript, React Query, Zustand, Tailwind',
+					'Business-facing web systems with SEO-oriented Next.js pages, heavy interactive tables, dynamic filters, multi-step forms and reusable UI-kit components extracted from legacy screens.',
+				stack:
+					'Next.js, React, TypeScript, FSD, TanStack Query, Zustand, Tailwind',
 			},
 			{
-				title: 'Exchange Commerce',
+				title: 'Auction and Barter Marketplace',
 				kicker: 'GetByVerto',
 				description:
-					'Marketplace flows where users could pay with money or exchange goods, backed by SSR and state discipline.',
-				stack: 'Next.js, TypeScript, React Query, Zustand, Tailwind',
+					'Marketplace frontend where users could buy goods, offer their own goods in exchange, or combine payment and barter. The work focused on typed contracts, predictable cache updates and reusable marketplace scenarios.',
+				stack:
+					'Next.js, React, TypeScript, Orval, TanStack Query, Zustand, Tailwind',
 			},
 			{
-				title: 'Admin Commerce',
+				title: 'Home Goods E-commerce',
 				kicker: 'Welive Turkish Company',
 				description:
-					'Marketplace with roles and administration: legacy cleanup, performance fixes and clearer feature boundaries.',
-				stack: 'Next.js, TypeScript, Redux Toolkit, SCSS',
+					'E-commerce platform for home goods and room fragrance products, including catalog pages, product cards, forms, tables, admin sections and role-based interfaces for different access levels.',
+				stack: 'Next.js, React, TypeScript, Redux Toolkit, Material UI, SCSS',
+			},
+			{
+				title: 'Bank Budgeting System',
+				kicker: 'Budgeting OAPiSR',
+				description:
+					'Internal banking budgeting system with tables, formulas, calculated data and branch structure. The frontend handled complex table scenarios, tree structures, validation states and slow request behavior.',
+				stack: 'React, Next.js, Ant Design, Styled Components, REST API',
 			},
 		],
 		note: 'Resume generated from portfolio content.',
 	},
 	ru: {
 		fileName: 'iskender-rustambekov-resume-ru.html',
-		title: 'Искендер Рустамбеков - Frontend Engineer Резюме',
+		title: 'Искендер Рустамбеков - Frontend Developer Резюме',
 		name: 'Искендер Рустамбеков',
-		role: 'Frontend Engineer / React TypeScript Engineer',
+		role: 'Frontend Developer / React / Next.js / TypeScript',
 		location: 'Бишкек / Удаленно',
 		sections: {
 			profile: 'Профиль',
@@ -150,89 +179,108 @@ const resumes = {
 			projects: 'Проекты',
 		},
 		summary:
-			'Frontend engineer с 4+ годами коммерческого опыта в разработке веб-продуктов на React, Next.js и TypeScript. Фокус на продуктовой логике, API-нагруженных сценариях, real-time интерфейсах, предсказуемом состоянии и frontend-архитектуре масштабируемых приложений.',
+			'Frontend-разработчик с 4+ годами коммерческого опыта в продуктовых веб-приложениях, e-commerce, marketplace-платформах, админ-панелях, внутренних банковских системах и real-time продуктах. Сильные стороны: React, Next.js, TypeScript, frontend-архитектура, API-интеграции и сложные интерфейсы.',
 		metrics: [
 			['4+', 'года коммерческого frontend-опыта'],
-			['8', 'рабочих продуктовых сред'],
-			['Фокус', 'ответственность за frontend'],
+			['5', 'компаний'],
+			['Remote', 'готов к удаленной работе'],
 		],
 		strengths: [
-			'Frontend-архитектура, границы фич и shared-слои.',
-			'Типизированные API-контракты, DTO-маппинг, loading/error состояния.',
-			'Сложные продуктовые правила: роли, права, формы, кеш и переходы состояния.',
-			'Технические требования, синхронизация с backend/design и ответственность за поставку.',
+			'React, Next.js и TypeScript в продуктовых интерфейсах.',
+			'Frontend-архитектура и декомпозиция сложных интерфейсов.',
+			'TanStack Query, Zustand и Redux Toolkit для предсказуемого состояния.',
+			'REST API, WebSockets, OpenAPI и Orval-интеграции.',
+			'Сложные формы, таблицы, дашборды и админ-панели.',
 		],
-		languages: ['Английский: B1', 'Русский: родной', 'Кыргызский: родной'],
+		languages: ['Английский: B1', 'Русский: родной'],
 		experience: [
 			{
-				role: 'Frontend Web Developer',
-				company: 'Nomad Games',
+				role: 'Frontend-разработчик',
+				company: 'NomadGames',
 				description:
-					'Отвечал за frontend-направление в локальном indie-стартапе из Бишкека, который строил free-to-play веб-платформу для casual multiplayer настольных и карточных игр, вдохновленных традиционными играми разных стран. Покрывал архитектуру, требования к API, технические задачи, игровые сценарии и стабильное поведение в браузере.',
-				stack: 'React.js, TypeScript, Web games, Multiplayer games',
-				meta: ['Сен 2024 - Янв 2026', '1 год 5 месяцев', 'Bishkek, startup'],
+					'Разрабатывал frontend веб-платформы для бесплатных браузерных multiplayer-игр с нуля: архитектуру приложения, UI, управление состоянием, API-интеграции и real-time взаимодействие. Реализовывал переиспользуемые менеджеры звука, вибраций, загрузки ассетов и состояния экрана, а также заранее прорабатывал API-контракты с backend-командой.',
+				stack:
+					'React, TypeScript, Feature-Sliced Design, Zustand, TanStack Query, Centrifugo, WebSockets, REST API, Tailwind CSS',
+				meta: [
+					'Сентябрь 2024 - апрель 2026',
+					'1 год 8 месяцев',
+					'Бишкек, продуктовая платформа',
+				],
 			},
 			{
-				role: 'Frontend Web Developer',
+				role: 'Frontend-разработчик',
 				company: 'DATAxWAY',
 				description:
-					'Разрабатывал продуктовые интерфейсы, маркетплейсы, админ-панели и SEO-ориентированные сайты с нуля до продакшена, сохраняя параллельные проекты поддерживаемыми.',
-				stack: 'React.js, TypeScript, Frontend architecture',
-				meta: ['Авг 2023 - Июн 2024', '11 месяцев', 'Бишкек, офис'],
+					'Работал над e-commerce, marketplace-платформами, SEO-ориентированными сайтами и административными панелями для бизнеса. Реализовывал SSR/SSG/ISR-страницы на Next.js, оптимизировал загрузку изображений и шрифтов для FCP/LCP, декомпозировал монолитные UI-модули в переиспользуемые UI-kit компоненты.',
+				stack:
+					'Next.js, React, TypeScript, Feature-Sliced Design, TanStack Query, Zustand, Tailwind CSS, REST API',
+				meta: ['Август 2023 - июнь 2024', '11 месяцев', 'Бишкек, офис'],
 			},
 			{
-				role: 'Frontend Web Developer',
+				role: 'Frontend-разработчик',
 				company: 'GetByVerto',
 				description:
-					'Удаленно поставлял frontend для Next.js-продуктов с типизированными backend-контрактами, предсказуемым состоянием и дисциплинированной работой с запросами.',
-				stack: 'Next.js, TypeScript',
-				meta: ['Авг 2022 - Авг 2023', '1 год 1 месяц', 'Удаленно'],
+					'Разрабатывал frontend marketplace-платформы с аукционами, чатами и бартерной моделью сделок. Реализовал типизированный API-слой через Orval, настроил кэширование и инвалидацию данных через TanStack Query, выносил повторяющуюся marketplace-логику в переиспользуемые компоненты и модули.',
+				stack:
+					'Next.js, React, TypeScript, Orval, TanStack Query, Zustand, Tailwind CSS, REST API',
+				meta: ['Август 2022 - август 2023', '1 год 1 месяц', 'Удаленно'],
 			},
 			{
-				role: 'Frontend Web Developer',
+				role: 'Frontend-разработчик',
 				company: 'Welive Turkish Company',
 				description:
-					'Разрабатывал frontend-фичи для веб-продуктов в быстрой продуктовой среде.',
-				stack: 'Next.js, TypeScript',
-				meta: ['Янв 2022 - Июл 2022', '7 месяцев', 'Бишкек, офис'],
+					'Работал над e-commerce платформой для продажи товаров для дома и ароматизации помещений. Реализовывал страницы каталога, карточки товаров, формы, таблицы и административные разделы, включая интерфейсы для разных уровней доступа.',
+				stack:
+					'Next.js, React, TypeScript, Redux Toolkit, Material UI, SCSS, REST API',
+				meta: ['Январь 2022 - июль 2022', '7 месяцев', 'Бишкек, офис'],
 			},
 			{
-				role: 'Frontend Developer',
+				role: 'Frontend-разработчик',
 				company: 'Budgeting OAPiSR',
 				description:
-					'Создал внутреннюю банковскую систему бюджетирования с логикой формул, таблицами, правилами филиалов, drag-and-drop и автоматическими расчетами на frontend.',
-				stack: 'Budget systems, Bank branch logic',
-				meta: ['Окт 2021 - Янв 2022', '4 месяца', 'Контракт, удаленно'],
+					'Разрабатывал интерфейсы для внутренней банковской системы бюджетирования с таблицами, формулами, расчетными данными и филиальной структурой. Реализовывал сложные табличные сценарии, оптимизировал большие таблицы и древовидные структуры, обрабатывал ошибки валидации, медленные запросы и нестандартные состояния интерфейса.',
+				stack: 'React, Next.js, Ant Design, Styled Components, REST API',
+				meta: ['Октябрь 2021 - январь 2022', '4 месяца', 'Контракт, удаленно'],
 			},
 		],
 		projects: [
 			{
-				title: 'Casual Multiplayer Games Platform',
-				kicker: 'Nomad Games',
+				title: 'Платформа браузерных multiplayer-игр',
+				kicker: 'NomadGames',
 				description:
-					'Ответственность за frontend free-to-play веб-платформы casual multiplayer настольных и карточных игр, вдохновленных традиционными играми разных стран.',
-				stack: 'React, TypeScript, TanStack Query, Zustand, Tailwind',
+					'Frontend бесплатной веб-платформы для браузерных multiplayer-игр, построенный с нуля вокруг архитектуры приложения, UI, состояния, API-контрактов и real-time взаимодействия через Centrifugo и WebSockets.',
+				stack:
+					'React, TypeScript, FSD, Zustand, TanStack Query, Centrifugo, Tailwind',
 			},
 			{
-				title: 'Business Web Systems',
+				title: 'E-commerce, marketplace и админ-панели',
 				kicker: 'DATAxWAY',
 				description:
-					'Маркетплейсы, сервисные сайты и админ-панели, доведенные до продакшена с учетом SEO и понятной коммуникации с backend.',
-				stack: 'React, Next.js, TypeScript, React Query, Zustand, Tailwind',
+					'Веб-системы для бизнеса: SEO-ориентированные страницы на Next.js, тяжелые интерактивные таблицы, динамическая фильтрация, многошаговые формы и UI-kit компоненты, вынесенные из legacy-экранов.',
+				stack:
+					'Next.js, React, TypeScript, FSD, TanStack Query, Zustand, Tailwind',
 			},
 			{
-				title: 'Exchange Commerce',
+				title: 'Marketplace с аукционами и бартером',
 				kicker: 'GetByVerto',
 				description:
-					'Сценарии маркетплейса, где пользователи могли платить деньгами или обменивать товары, с SSR и дисциплиной состояния.',
-				stack: 'Next.js, TypeScript, React Query, Zustand, Tailwind',
+					'Frontend marketplace-платформы, где пользователи могли покупать товары за деньги, предлагать свои товары в обмен или комбинировать оплату и бартер. Работа была сфокусирована на типизированных контрактах, предсказуемом обновлении кэша и переиспользуемых marketplace-сценариях.',
+				stack:
+					'Next.js, React, TypeScript, Orval, TanStack Query, Zustand, Tailwind',
 			},
 			{
-				title: 'Admin Commerce',
+				title: 'E-commerce для товаров для дома',
 				kicker: 'Welive Turkish Company',
 				description:
-					'Маркетплейс с ролями и администрированием: чистка legacy, performance fixes и более ясные границы фич.',
-				stack: 'Next.js, TypeScript, Redux Toolkit, SCSS',
+					'Платформа для продажи товаров для дома и ароматизации помещений: страницы каталога, карточки товаров, формы, таблицы, административные разделы и интерфейсы для разных уровней доступа.',
+				stack: 'Next.js, React, TypeScript, Redux Toolkit, Material UI, SCSS',
+			},
+			{
+				title: 'Банковская система бюджетирования',
+				kicker: 'Budgeting OAPiSR',
+				description:
+					'Внутренняя банковская система бюджетирования с таблицами, формулами, расчетными данными и филиальной структурой. Frontend покрывал сложные табличные сценарии, древовидные структуры, состояния валидации и поведение при медленных запросах.',
+				stack: 'React, Next.js, Ant Design, Styled Components, REST API',
 			},
 		],
 		note: 'Резюме собрано на основе данных портфолио.',

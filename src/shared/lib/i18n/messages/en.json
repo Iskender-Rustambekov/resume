@@ -3,52 +3,66 @@
 		"title": "Portfolio"
 	},
 	"header": {
-		"brand": "Portfolio",
+		"brand": "Iskender Rustambekov",
 		"nav": {
-			"origin": "Origin",
+			"origin": "Home",
 			"projects": "Projects",
-			"work": "Work",
+			"work": "Approach",
 			"experience": "Experience",
 			"contact": "Contact"
 		}
 	},
 	"mainPage": {
 		"hero": {
-			"kicker": "Frontend Engineer / React TypeScript Engineer",
-			"title": "Frontend",
-			"titleAccent": "Viltrumite.",
-			"description": "4+ years of commercial experience building web products with React, Next.js and TypeScript. Focused on complex product logic, API-heavy flows, real-time behavior and frontend architecture for scalable applications.",
+			"kicker": "Frontend Developer / React / Next.js / TypeScript",
+			"title": "Iskender",
+			"titleAccent": "Rustambekov.",
+			"description": "Frontend developer with 4+ years of commercial experience across product web applications, e-commerce, marketplace platforms, admin panels, internal banking systems and real-time products.",
 			"projectsCta": "View projects",
 			"githubCta": "GitHub",
-			"imageAlt": "Frontend developer hero image"
+			"imageAlt": "Frontend developer hero image",
+			"profileCard": {
+				"file": "iskender.profile",
+				"status": "Available for remote frontend roles",
+				"title": "React / Next.js engineer focused on complex product interfaces.",
+				"role": "role",
+				"roleValue": "Frontend Developer",
+				"experience": "experience",
+				"experienceValue": "4 years 5 months",
+				"stack": "stack",
+				"stackValue": "React, Next.js, TypeScript",
+				"focus": "focus",
+				"focusValue": "Architecture, API contracts, complex UI, real-time",
+				"location": "location",
+				"locationValue": "Bishkek / Remote"
+			}
 		},
 		"projects": {
-			"kicker": "Selected projects",
-			"title": "Selected work, presented like a terminal session."
+			"kicker": "Projects",
+			"title": "Resume-backed product work, structured as public cases."
 		},
 		"craft": {
-			"kicker": "Work",
-			"title": "How I turn product complexity into frontend systems."
+			"kicker": "Approach",
+			"title": "How I turn product complexity into maintainable frontend systems."
 		},
 		"experience": {
 			"kicker": "Experience",
-			"title": "Where that work happened.",
+			"title": "Work experience.",
 			"range": "2021 - 2026",
-			"summary": "Remote, office, contract and product startup work.",
-			"description": "This section is the map: dates, roles and environments. The deeper project details live above, where they are easier to compare.",
+			"summary": "Full-time, contract, office and remote work.",
+			"description": "All resume positions are preserved here: from an internal banking system and e-commerce to marketplace platforms, SEO sites, admin panels and a real-time multiplayer product.",
 			"languages": "Languages",
-			"languagesDescription": "Comfortable across local teams and English-speaking product contexts.",
+			"languagesDescription": "Comfortable with Russian-speaking teams and English technical documentation.",
 			"english": "English B1",
-			"russian": "Russian native",
-			"kyrgyz": "Kyrgyz native"
+			"russian": "Russian native"
 		},
 		"stack": {
 			"kicker": "Stack",
-			"title": "Technologies I use in production."
+			"title": "Technologies used in real commercial work."
 		},
 		"contact": {
 			"kicker": "Contact",
-			"title": "Open to remote frontend opportunities.",
+			"title": "Open to remote Frontend Developer",
 			"email": "Email",
 			"github": "GitHub",
 			"linkedin": "LinkedIn",
@@ -56,7 +70,7 @@
 			"cv": "CV"
 		},
 		"footer": {
-			"caption": "Frontend portfolio, cinematic system edition.",
+			"caption": "Frontend portfolio: React, Next.js, TypeScript, complex UI and API integrations.",
 			"location": "Bishkek / Remote"
 		}
 	},

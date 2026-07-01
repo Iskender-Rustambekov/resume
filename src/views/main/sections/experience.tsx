@@ -56,9 +56,6 @@ export const ExperienceSection = async () => {
 						<span className="rounded-full border border-border bg-background/60 px-3 py-1 text-xs font-medium text-foreground">
 							{t('russian')}
 						</span>
-						<span className="rounded-full border border-border bg-background/60 px-3 py-1 text-xs font-medium text-foreground">
-							{t('kyrgyz')}
-						</span>
 					</div>
 				</div>
 			</div>

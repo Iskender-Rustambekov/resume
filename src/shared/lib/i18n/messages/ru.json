@@ -3,7 +3,7 @@
 		"title": "Портфолио"
 	},
 	"header": {
-		"brand": "Портфолио",
+		"brand": "Искендер Рустамбеков",
 		"nav": {
 			"origin": "Начало",
 			"projects": "Проекты",
@@ -14,41 +14,55 @@
 	},
 	"mainPage": {
 		"hero": {
-			"kicker": "Frontend Engineer / React TypeScript Engineer",
-			"title": "Frontend",
-			"titleAccent": "Viltrumite.",
-			"description": "4+ года коммерческого опыта в разработке веб-продуктов на React, Next.js и TypeScript. Фокус на сложной продуктовой логике, API-нагруженных сценариях, real-time поведении и frontend-архитектуре для масштабируемых приложений.",
+			"kicker": "Frontend Developer / React / Next.js / TypeScript",
+			"title": "Искендер",
+			"titleAccent": "Рустамбеков.",
+			"description": "Frontend-разработчик с 4+ годами коммерческого опыта в продуктовых веб-приложениях, e-commerce, marketplace-платформах, админ-панелях, внутренних банковских системах и real-time продуктах.",
 			"projectsCta": "Смотреть проекты",
 			"githubCta": "GitHub",
-			"imageAlt": "Изображение frontend-разработчика"
+			"imageAlt": "Изображение frontend-разработчика",
+			"profileCard": {
+				"file": "iskender.profile",
+				"status": "Открыт к удаленным frontend-позициям",
+				"title": "React / Next.js инженер с фокусом на сложные продуктовые интерфейсы.",
+				"role": "role",
+				"roleValue": "Frontend Developer",
+				"experience": "experience",
+				"experienceValue": "4 года 5 месяцев",
+				"stack": "stack",
+				"stackValue": "React, Next.js, TypeScript",
+				"focus": "focus",
+				"focusValue": "Архитектура, API-контракты, complex UI, real-time",
+				"location": "location",
+				"locationValue": "Бишкек / Удаленно"
+			}
 		},
 		"projects": {
-			"kicker": "Избранные проекты",
-			"title": "Работы, показанные как терминальная сессия."
+			"kicker": "Проекты",
+			"title": "Продуктовые задачи из резюме, собранные в кейсы."
 		},
 		"craft": {
 			"kicker": "Подход",
-			"title": "Как я превращаю продуктовую сложность во frontend-системы."
+			"title": "Как я превращаю продуктовую сложность в поддерживаемые frontend-системы."
 		},
 		"experience": {
 			"kicker": "Опыт",
-			"title": "Где происходила эта работа.",
+			"title": "Опыт работы.",
 			"range": "2021 - 2026",
-			"summary": "Удаленная, офисная, контрактная работа и продуктовый стартап.",
-			"description": "Этот блок показывает карту опыта: даты, роли и форматы работы. Детали проектов выше, где их удобнее сравнивать.",
+			"summary": "Полная занятость, контракт, офисный и удаленный формат.",
+			"description": "В опыте сохранены все места работы из резюме: от внутренней банковской системы и e-commerce до marketplace-платформ, SEO-сайтов, админ-панелей и real-time multiplayer-продукта.",
 			"languages": "Языки",
-			"languagesDescription": "Комфортно работаю с локальными командами и англоязычным продуктовым контекстом.",
+			"languagesDescription": "Работаю с русскоязычными командами и читаю техническую документацию на английском.",
 			"english": "Английский B1",
-			"russian": "Русский родной",
-			"kyrgyz": "Кыргызский родной"
+			"russian": "Русский родной"
 		},
 		"stack": {
 			"kicker": "Стек",
-			"title": "Технологии, которые я использую в продакшене."
+			"title": "Технологии из реального коммерческого опыта."
 		},
 		"contact": {
 			"kicker": "Контакты",
-			"title": "Открыт к удаленным frontend-вакансиям.",
+			"title": "Открыт к удаленной позиции Frontend Developer",
 			"email": "Email",
 			"github": "GitHub",
 			"linkedin": "LinkedIn",
@@ -56,7 +70,7 @@
 			"cv": "CV"
 		},
 		"footer": {
-			"caption": "Frontend-портфолио в формате выразительной продуктовой системы.",
+			"caption": "Frontend-портфолио: React, Next.js, TypeScript, complex UI и API-интеграции.",
 			"location": "Бишкек / Удаленно"
 		}
 	},

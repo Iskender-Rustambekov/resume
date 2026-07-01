@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import {
 	ArrowUpRightIcon,
 	GithubLogoIcon,
@@ -24,13 +22,11 @@ export const HeroSection = async () => {
 			<div className="container grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
 				<div data-motion="hero-copy" className="max-w-4xl">
 					<p className="mb-6 inline-flex rounded-full border border-border bg-card/60 px-4 py-2 text-sm text-primary">
-						{t('kicker')}
+						{t('title')} {t('titleAccent')}
 					</p>
 					<h1 className="max-w-5xl text-[clamp(3.8rem,10vw,9.8rem)] font-semibold leading-[0.86] tracking-normal text-foreground">
-						{t('title')}
-						<span className="block text-muted-foreground">
-							{t('titleAccent')}
-						</span>
+						Frontend
+						<span className="block text-muted-foreground">Developer</span>
 					</h1>
 					<p className="mt-8 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
 						{t('description')}
@@ -54,25 +50,6 @@ export const HeroSection = async () => {
 							<GithubLogoIcon className="size-5" weight="bold" />
 							{t('githubCta')}
 						</a>
-					</div>
-				</div>
-
-				<div
-					data-motion="hero-visual"
-					className="relative mx-auto aspect-[0.82] w-full max-w-130"
-				>
-					<div data-motion="hero-parallax">
-						<div data-motion="hero-breathing">
-							<Image
-								src="/media/images/main-page/hero4.png"
-								alt={t('imageAlt')}
-								width={496}
-								height={1193}
-								className="h-full min-h-150 max-h-200 object-contain"
-								style={{ width: 'auto' }}
-								priority
-							/>
-						</div>
 					</div>
 				</div>
 			</div>
