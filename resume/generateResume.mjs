@@ -54,7 +54,6 @@ const resumes = {
 			strengths: 'Strengths',
 			languages: 'Languages',
 			experience: 'Experience',
-			projects: 'Selected Projects',
 		},
 		summary:
 			'Frontend developer with 4+ years of commercial experience across product web applications, e-commerce, marketplace platforms, admin panels, internal banking systems and real-time products. Strong in React, Next.js, TypeScript, frontend architecture, API integrations and complex interfaces.',
@@ -121,47 +120,8 @@ const resumes = {
 				meta: ['Oct 2021 - Jan 2022', '4 months', 'Contract, remote'],
 			},
 		],
-		projects: [
-			{
-				title: 'Browser Multiplayer Games Platform',
-				kicker: 'NomadGames',
-				description:
-					'Frontend for a free web platform for browser multiplayer games, built from zero around product architecture, UI, state, API contracts and real-time interaction through Centrifugo and WebSockets.',
-				stack:
-					'React, TypeScript, FSD, Zustand, TanStack Query, Centrifugo, Tailwind',
-			},
-			{
-				title: 'E-commerce, Marketplaces and Admin Panels',
-				kicker: 'DATAxWAY',
-				description:
-					'Business-facing web systems with SEO-oriented Next.js pages, heavy interactive tables, dynamic filters, multi-step forms and reusable UI-kit components extracted from legacy screens.',
-				stack:
-					'Next.js, React, TypeScript, FSD, TanStack Query, Zustand, Tailwind',
-			},
-			{
-				title: 'Auction and Barter Marketplace',
-				kicker: 'GetByVerto',
-				description:
-					'Marketplace frontend where users could buy goods, offer their own goods in exchange, or combine payment and barter. The work focused on typed contracts, predictable cache updates and reusable marketplace scenarios.',
-				stack:
-					'Next.js, React, TypeScript, Orval, TanStack Query, Zustand, Tailwind',
-			},
-			{
-				title: 'Home Goods E-commerce',
-				kicker: 'Welive Turkish Company',
-				description:
-					'E-commerce platform for home goods and room fragrance products, including catalog pages, product cards, forms, tables, admin sections and role-based interfaces for different access levels.',
-				stack: 'Next.js, React, TypeScript, Redux Toolkit, Material UI, SCSS',
-			},
-			{
-				title: 'Bank Budgeting System',
-				kicker: 'Budgeting OAPiSR',
-				description:
-					'Internal banking budgeting system with tables, formulas, calculated data and branch structure. The frontend handled complex table scenarios, tree structures, validation states and slow request behavior.',
-				stack: 'React, Next.js, Ant Design, Styled Components, REST API',
-			},
-		],
-		note: 'Resume generated from portfolio content.',
+
+		note: '',
 	},
 	ru: {
 		fileName: 'iskender-rustambekov-resume-ru.html',
@@ -176,7 +136,6 @@ const resumes = {
 			strengths: 'Сильные стороны',
 			languages: 'Языки',
 			experience: 'Опыт',
-			projects: 'Проекты',
 		},
 		summary:
 			'Frontend-разработчик с 4+ годами коммерческого опыта в продуктовых веб-приложениях, e-commerce, marketplace-платформах, админ-панелях, внутренних банковских системах и real-time продуктах. Сильные стороны: React, Next.js, TypeScript, frontend-архитектура, API-интеграции и сложные интерфейсы.',
@@ -243,47 +202,7 @@ const resumes = {
 				meta: ['Октябрь 2021 - январь 2022', '4 месяца', 'Контракт, удаленно'],
 			},
 		],
-		projects: [
-			{
-				title: 'Платформа браузерных multiplayer-игр',
-				kicker: 'NomadGames',
-				description:
-					'Frontend бесплатной веб-платформы для браузерных multiplayer-игр, построенный с нуля вокруг архитектуры приложения, UI, состояния, API-контрактов и real-time взаимодействия через Centrifugo и WebSockets.',
-				stack:
-					'React, TypeScript, FSD, Zustand, TanStack Query, Centrifugo, Tailwind',
-			},
-			{
-				title: 'E-commerce, marketplace и админ-панели',
-				kicker: 'DATAxWAY',
-				description:
-					'Веб-системы для бизнеса: SEO-ориентированные страницы на Next.js, тяжелые интерактивные таблицы, динамическая фильтрация, многошаговые формы и UI-kit компоненты, вынесенные из legacy-экранов.',
-				stack:
-					'Next.js, React, TypeScript, FSD, TanStack Query, Zustand, Tailwind',
-			},
-			{
-				title: 'Marketplace с аукционами и бартером',
-				kicker: 'GetByVerto',
-				description:
-					'Frontend marketplace-платформы, где пользователи могли покупать товары за деньги, предлагать свои товары в обмен или комбинировать оплату и бартер. Работа была сфокусирована на типизированных контрактах, предсказуемом обновлении кэша и переиспользуемых marketplace-сценариях.',
-				stack:
-					'Next.js, React, TypeScript, Orval, TanStack Query, Zustand, Tailwind',
-			},
-			{
-				title: 'E-commerce для товаров для дома',
-				kicker: 'Welive Turkish Company',
-				description:
-					'Платформа для продажи товаров для дома и ароматизации помещений: страницы каталога, карточки товаров, формы, таблицы, административные разделы и интерфейсы для разных уровней доступа.',
-				stack: 'Next.js, React, TypeScript, Redux Toolkit, Material UI, SCSS',
-			},
-			{
-				title: 'Банковская система бюджетирования',
-				kicker: 'Budgeting OAPiSR',
-				description:
-					'Внутренняя банковская система бюджетирования с таблицами, формулами, расчетными данными и филиальной структурой. Frontend покрывал сложные табличные сценарии, древовидные структуры, состояния валидации и поведение при медленных запросах.',
-				stack: 'React, Next.js, Ant Design, Styled Components, REST API',
-			},
-		],
-		note: 'Резюме собрано на основе данных портфолио.',
+		note: '',
 	},
 };
 
@@ -292,11 +211,11 @@ const css = `
 * { box-sizing: border-box; }
 body {
 	margin: 0;
-	background: #ffffff;
-	color: #121722;
+	background: #eef2f8;
+	color: #162032;
 	font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-	font-size: 9.35px;
-	line-height: 1.36;
+	font-size: 9.15px;
+	line-height: 1.38;
 }
 a { color: inherit; text-decoration: none; }
 .page {
@@ -305,134 +224,159 @@ a { color: inherit; text-decoration: none; }
 	min-height: 297mm;
 	margin: 0 auto;
 	overflow: hidden;
-	background: #fbfcff;
+	background: #f8fafc;
 }
 .page::before {
 	position: absolute;
 	inset: 0 0 auto;
-	height: 6.5mm;
-	background: linear-gradient(90deg, #121722, #2557d6 44%, #10a37f 100%);
+	height: 9mm;
+	background: linear-gradient(90deg, #0f172a 0%, #1d4ed8 52%, #0f766e 100%);
 	content: "";
 }
 .content {
 	position: relative;
 	z-index: 1;
 	display: grid;
-	grid-template-columns: 61mm 1fr;
-	gap: 7mm;
-	padding: 14mm 11mm 10mm;
+	grid-template-columns: 63mm minmax(0, 1fr);
+	gap: 6mm;
+	padding: 13mm 10mm 9mm;
 }
 .header {
 	grid-column: 1 / -1;
 	display: grid;
-	grid-template-columns: 1fr 72mm;
-	gap: 10mm;
-	align-items: end;
-	padding-bottom: 5mm;
-	border-bottom: 1px solid rgba(18, 23, 34, 0.16);
+	grid-template-columns: minmax(0, 1fr) 73mm;
+	gap: 8mm;
+	align-items: center;
+	padding: 7mm;
+	border: 1px solid rgba(15, 23, 42, 0.1);
+	border-radius: 5mm;
+	background: #ffffff;
+	box-shadow: 0 3mm 10mm rgba(15, 23, 42, 0.08);
 }
 .name {
 	margin: 0;
-	font-size: 30px;
-	line-height: 0.96;
+	font-size: 31px;
+	line-height: 0.94;
 	letter-spacing: 0;
-	color: #0e1320;
+	color: #0f172a;
 }
 .role {
-	margin: 3mm 0 0;
-	color: #2557d6;
-	font-size: 12px;
+	margin: 2.6mm 0 0;
+	color: #1d4ed8;
+	font-size: 11.3px;
 	font-weight: 800;
 	letter-spacing: 0;
 	text-transform: uppercase;
 }
-.summary { margin: 0; color: #3b4658; font-size: 10px; }
+.summary { margin: 0; color: #334155; font-size: 9.75px; }
 .contact {
-	display: grid;
-	gap: 1.4mm;
-	color: #30394a;
-	font-size: 8.6px;
-	text-align: right;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 1.35mm;
+	color: #334155;
+	font-size: 8.15px;
 }
-.contact strong { color: #121722; font-weight: 800; }
-.sidebar, .main { display: grid; align-content: start; gap: 4.2mm; }
+.contact a, .contact span {
+	padding: 1.1mm 1.7mm;
+	border: 1px solid rgba(29, 78, 216, 0.16);
+	border-radius: 99px;
+	background: #f8fafc;
+	white-space: nowrap;
+}
+.contact strong { color: #0f172a; font-weight: 800; }
+.sidebar, .main { display: grid; align-content: start; gap: 3.4mm; }
 .section { break-inside: avoid; }
 .section-title {
 	display: flex;
 	align-items: center;
-	gap: 2.2mm;
-	margin: 0 0 2.4mm;
-	color: #101624;
-	font-size: 10px;
+	gap: 1.8mm;
+	margin: 0 0 2.1mm;
+	color: #0f172a;
+	font-size: 9.35px;
 	font-weight: 900;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 }
 .section-title::before {
-	width: 4.4mm;
-	height: 1.5mm;
-	background: #2557d6;
+	width: 4mm;
+	height: 1.25mm;
+	border-radius: 99px;
+	background: #1d4ed8;
 	content: "";
 }
 .panel {
-	padding: 3.2mm;
-	border: 1px solid rgba(18, 23, 34, 0.12);
+	padding: 3mm;
+	border: 1px solid rgba(15, 23, 42, 0.1);
+	border-radius: 3mm;
 	background: #ffffff;
 }
-.skills { display: flex; flex-wrap: wrap; gap: 1.2mm; }
+.skills { display: flex; flex-wrap: wrap; gap: 1mm; }
 .skill {
-	padding: 1mm 1.8mm;
-	border: 1px solid rgba(37, 87, 214, 0.2);
-	background: #eef3ff;
-	color: #172544;
-	font-size: 8.45px;
+	padding: 0.9mm 1.45mm;
+	border: 1px solid rgba(29, 78, 216, 0.16);
+	border-radius: 99px;
+	background: #eff6ff;
+	color: #1e3a8a;
+	font-size: 7.75px;
 	font-weight: 700;
 }
-.metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm; }
-.metric { padding: 2.4mm; background: #121722; color: #ffffff; }
+.metric-grid { display: grid; gap: 1.7mm; }
+.metric {
+	padding: 2.35mm;
+	border-radius: 2.4mm;
+	background: linear-gradient(135deg, #0f172a, #1d4ed8);
+	color: #ffffff;
+}
 .metric b { display: block; font-size: 13px; }
 .metric span { color: rgba(255, 255, 255, 0.72); font-size: 7.9px; }
-.list { display: grid; gap: 1.7mm; margin: 0; padding: 0; list-style: none; }
-.list li { position: relative; padding-left: 3.3mm; color: #374255; }
+.list { display: grid; gap: 1.55mm; margin: 0; padding: 0; list-style: none; }
+.list li { position: relative; padding-left: 3.1mm; color: #334155; }
 .list li::before {
 	position: absolute;
-	top: 1.55mm;
+	top: 1.45mm;
 	left: 0;
-	width: 1.35mm;
-	height: 1.35mm;
-	background: #10a37f;
+	width: 1.25mm;
+	height: 1.25mm;
+	border-radius: 50%;
+	background: #0f766e;
 	content: "";
 }
 .job {
 	display: grid;
-	grid-template-columns: 1fr 34mm;
-	gap: 3mm;
-	padding-bottom: 3mm;
-	border-bottom: 1px solid rgba(18, 23, 34, 0.1);
-	break-inside: avoid;
-}
-.job:last-child { padding-bottom: 0; border-bottom: 0; }
-.job h3, .project h3 { margin: 0; color: #111725; font-size: 10.8px; line-height: 1.12; }
-.job .company, .project .kicker {
-	margin-top: 0.7mm;
-	color: #2557d6;
-	font-weight: 800;
-	font-size: 8.6px;
-}
-.job p, .project p { margin: 1.4mm 0 0; color: #3b4658; }
-.meta { color: #536070; font-size: 8.2px; text-align: right; }
-.stack-line { margin-top: 1.3mm; color: #5b6474; font-size: 8.05px; font-weight: 700; }
-.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4mm; }
-.project {
-	padding: 2.8mm;
-	border-left: 1.5mm solid #2557d6;
+	grid-template-columns: minmax(0, 1fr) 35mm;
+	gap: 3.2mm;
+	padding: 3mm;
+	border: 1px solid rgba(15, 23, 42, 0.1);
+	border-left: 1.6mm solid #1d4ed8;
+	border-radius: 3mm;
 	background: #ffffff;
 	break-inside: avoid;
 }
-.project:nth-child(2), .project:nth-child(4) { border-color: #10a37f; }
-.footer-note { color: #5b6474; font-size: 7.8px; }
+.job h3 { margin: 0; color: #0f172a; font-size: 10.8px; line-height: 1.12; }
+.job .company {
+	margin-top: 0.7mm;
+	color: #1d4ed8;
+	font-weight: 800;
+	font-size: 8.6px;
+}
+.job p { margin: 1.4mm 0 0; color: #334155; }
+.meta {
+	color: #475569;
+	font-size: 7.95px;
+	line-height: 1.5;
+	text-align: right;
+}
+.stack-line {
+	margin-top: 1.4mm;
+	color: #0f766e;
+	font-size: 7.85px;
+	font-weight: 800;
+}
+.footer-note { color: #64748b; font-size: 7.8px; }
 @media print {
 	body { background: #ffffff; }
+	.page { margin: 0; }
 }
 `;
 
@@ -498,21 +442,6 @@ const html = (resume) => `<!doctype html>
 								</div>`,
 							)
 							.join('')}
-					</section>
-					<section class="section">
-						<h2 class="section-title">${resume.sections.projects}</h2>
-						<div class="projects">
-							${resume.projects
-								.map(
-									(project) => `<article class="project">
-										<h3>${project.title}</h3>
-										<div class="kicker">${project.kicker}</div>
-										<p>${project.description}</p>
-										<div class="stack-line">${project.stack}</div>
-									</article>`,
-								)
-								.join('')}
-						</div>
 					</section>
 					<p class="footer-note">${resume.note}</p>
 				</section>
